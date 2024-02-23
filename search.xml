@@ -94,16 +94,15 @@
 <li>其他被共享电脑打开资源管理器，在地址栏内输入 \\共享电脑的计算机名，即可找到共享文件夹，右击共享文件夹发送快捷方式到桌面即可。</li>
 </ol>
 <h1 id="共享打印机"><a href="#共享打印机" class="headerlink" title="共享打印机"></a>共享打印机</h1><ol>
-<li><p>如需共享打印机，根据上方教程打开共享软件并点击下一步后点击共享打印机。</p>
-</li>
-<li><p>找到需要共享的打印机，右击属性，选择共享，勾选共享打印机，确定。</p>
-</li>
-<li><p>被共享电脑同上，在资源管理的地址栏中输入 \\共享电脑的计算机名即可找到共享的打印机。</p>
-</li>
-<li><p>在共享的打印机上面右击，点连接，再点确定即可完成共享。</p>
-<hr>
-<div class="tabs" id="远程协助"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#远程协助-1">共享文件夹</button></li><li class="tab"><button type="button" data-href="#远程协助-2">共享打印机</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="远程协助-1"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354ecd.jpg" alt="0"><br><img src="https://pic.imgdb.cn/item/65d86a1f9f345e8d0335574c.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e9d.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e47.jpg" alt="3"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="远程协助-2"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e02.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1b9f345e8d03354db0.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f41c.jpg" alt="3"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f377.jpg" alt="4"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f2fd.jpg" alt="5"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f27c.jpg" alt="6"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div></div></div></li>
+<li>如需共享打印机，根据上方教程打开共享软件并点击下一步后点击共享打印机。</li>
+<li>找到需要共享的打印机，右击属性，选择共享，勾选共享打印机，确定。</li>
+<li>被共享电脑同上，在资源管理的地址栏中输入 \\共享电脑的计算机名即可找到共享的打印机。</li>
+<li>在共享的打印机上面右击，点连接，再点确定即可完成共享。</li>
 </ol>
+<div>
+<div class="tabs" id="远程协助"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#远程协助-1">共享文件夹</button></li><li class="tab"><button type="button" data-href="#远程协助-2">共享打印机</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="远程协助-1"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354ecd.jpg" alt="0"><br><img src="https://pic.imgdb.cn/item/65d86a1f9f345e8d0335574c.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e9d.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e47.jpg" alt="3"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="远程协助-2"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e02.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1b9f345e8d03354db0.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f41c.jpg" alt="3"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f377.jpg" alt="4"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f2fd.jpg" alt="5"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f27c.jpg" alt="6"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div></div></div>
+</div>
+
 ]]></content>
       <categories>
         <category>工具软件</category>
