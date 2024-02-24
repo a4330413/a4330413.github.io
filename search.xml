@@ -7,21 +7,21 @@
 <table>
 <thead>
 <tr>
-<th>版本</th>
-<th>下载地址</th>
-<th>备注</th>
+<th align="center">版本</th>
+<th align="center">下载地址</th>
+<th align="center">备注</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Photoshop CC2020</td>
-<td><button class="btn-sco red larger" onclick="location.href = 'https://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2020-Mac/adobe-photoshop-cc2020-Mac.rar'" 
+<td align="center">Photoshop CC2020</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2020-Mac/adobe-photoshop-cc2020-Mac.rar'" 
   title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
-<td>Mac</td>
+<td align="center">Mac</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody></table>
 ]]></content>
