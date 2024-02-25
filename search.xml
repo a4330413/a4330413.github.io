@@ -3,8 +3,7 @@
   <entry>
     <title>Adobe Photoshop各版本下载</title>
     <url>/2024/02/22/Adobe%20Photoshop%E5%90%84%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p>Adobe Photoshop1</p>
-<table>
+    <content><![CDATA[<table>
 <thead>
 <tr>
 <th align="center">版本</th>
@@ -16,12 +15,90 @@
 <td align="center">Photoshop CC2020</td>
 <td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2020-Mac/adobe-photoshop-cc2020-Mac.rar'" 
   title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
-<td align="center">Mac</td>
+<td align="center"><label class="hl-label bg-red">Mac</label> </td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Photoshop 2024 v25.1</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/Adobe Photoshop 2024 v25.1/Adobe Photoshop 2024 v25.1.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop 2023 v24.1.1便携版</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/Photoshop 2023 v24.1.1便携版/Photoshop 2023 v24.1.1便携版.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop 2021正式版</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/Photoshop 2021正式版/Photoshop 2021正式版.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CC2019</td>
+<td align="center"><button class="btn-sco red larger %}</td>
+<td align="center">{% label Windows blue %}</td>
+</tr>
+<tr>
+<td align="center">Photoshop CC2018</td>
+<td align="center">{% btn http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2018/adobe-photoshop-cc2018.zip'" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/Adobe Photoshop CC 2019/Adobe Photoshop CC 2019.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CC2017</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2017/adobe-photoshop-cc2017.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CC2015</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2015.5/adobe-photoshop-cc2015.5.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CC2014一键安装</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/psCC2014一键安装包/psCC2014一键安装包.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CS4</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop_CS3/adobe-photoshop_CS3.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CS3</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop_CS4/adobe-photoshop_CS4..zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CS2</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop_CS2/adobe-photoshop_CS2.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop 8.0</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop8.0/adobe-photoshop8.0.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop 7.0</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/photoshop7.0/photoshop7.0.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop 6.0</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop6.0/adobe-photoshop6.0.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
 </tr>
 </tbody></table>
 ]]></content>
