@@ -36,6 +36,18 @@
 <td align="center"><label class="hl-label bg-blue">Windows</label> </td>
 </tr>
 <tr>
+<td align="center">Photoshop CC2019</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2018/adobe-photoshop-cc2018.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
+<td align="center">Photoshop CC2018</td>
+<td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2017/adobe-photoshop-cc2017.zip'" 
+  title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
+<td align="center"><label class="hl-label bg-blue">Windows</label> </td>
+</tr>
+<tr>
 <td align="center">Photoshop CC2017</td>
 <td align="center"><button class="btn-sco red larger" onclick="location.href = 'http://0564.eu.org:5244/软件/专业软件/Adobe/adobe-photoshop-cc2017/adobe-photoshop-cc2017.zip'" 
   title="下载"><i class="scoicon sco-arrow-right-bold"></i><span>下载</span></button></td>
