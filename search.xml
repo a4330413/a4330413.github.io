@@ -221,7 +221,7 @@
     <title>远程协助</title>
     <url>/2024/02/19/%E8%BF%9C%E7%A8%8B%E5%8D%8F%E5%8A%A9/</url>
     <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title="   "></a><div> <label class="hl-label bg-blue">方法一</label>  <label class="hl-label bg-red">TODESK远程协助</label>  </div></h2><p>第一步：点击  <button class="btn-sco blue larger" onclick="location.href = 'https://dl.todesk.com/windows/ToDesk_Lite.exe'" 
-  title="Download"><i class="download sco-arrow-right-bold"></i><span>Download</span></button></p>
+  title="Download"><i class="scoicon sco-arrow-right-bold"></i><span>Download</span></button></p>
 <p>第二步： 下载完成后，打开下载的远程协助软件，发送类似下方图片的代码和密码给我即可。</p>
 <p><img src="https://pic.imgdb.cn/item/65d5893c9f345e8d03d184f2.jpg" alt="todesk"></p>
 <hr>
