@@ -4883,6 +4883,115 @@ span.tagsPageCount {
     left: 50px;
   }
 }
+#gallery {
+  padding: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  margin: -8px;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+#gallery .gallery-item {
+  overflow: hidden;
+  border: var(--style-border-always);
+  border-radius: 12px;
+  position: relative;
+  float: left;
+  display: flex;
+  height: 250px;
+  width: calc(100% / 3 - 16px);
+  cursor: pointer;
+  margin: 8px;
+}
+@media screen and (max-width: 1200px) {
+  #gallery .gallery-item {
+    width: calc(100% / 2 - 16px);
+  }
+}
+@media screen and (max-width: 768px) {
+  #gallery .gallery-item {
+    width: 100%;
+  }
+}
+#gallery .gallery-item:hover .cover {
+  filter: brightness(0.5) blur(2px);
+  transition: all 0.3s;
+}
+#gallery .gallery-item:hover .title::after {
+  width: 100%;
+  transition: all 0.3s;
+}
+#gallery .gallery-item:hover .desc {
+  left: 10%;
+  transition: left 0.35s;
+  text-wrap: unset;
+}
+#gallery .gallery-item .cover {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+#gallery .gallery-item .title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--sco-white);
+}
+#gallery .gallery-item .title::after {
+  top: 55px;
+  width: 0;
+  left: 0;
+  height: 3px;
+  background: var(--sco-white);
+  content: "";
+  border-radius: 1px;
+  position: absolute;
+  transition: all 0.3s;
+}
+#gallery .gallery-item .desc {
+  position: absolute;
+  top: 35%;
+  left: 100%;
+  width: 80%;
+  color: var(--sco-white);
+  font-size: 1.1em;
+  transition: left 0.35s;
+  letter-spacing: 1px;
+  text-wrap: break-word;
+}
+#album {
+  margin: 5px auto;
+}
+#album .locate {
+  display: flex;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background: var(--sco-black-op);
+  font-size: 12px;
+  color: var(--sco-white);
+  transition: 0.3s;
+  z-index: 1;
+  user-select: none;
+}
+#album .sco-gallery-item {
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: var(--style-border-always);
+}
+#album .sco-gallery-image {
+  width: 100%;
+  display: block;
+  height: auto;
+}
 #about-page {
   display: flex;
   padding-top: 1rem;
