@@ -356,7 +356,7 @@
   <entry>
     <title>系统激活</title>
     <url>/2024/02/18/%E7%B3%BB%E7%BB%9F%E6%BF%80%E6%B4%BB/</url>
-    <content><![CDATA[<h2 id="激活方式一：激活软件激活"><a href="#激活方式一：激活软件激活" class="headerlink" title="激活方式一：激活软件激活"></a>激活方式一：激活软件激活</h2><p>点击<button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/%E6%BF%80%E6%B4%BB/yunmeng.exe'" 
+    <content><![CDATA[<h2 id="激活方式一：激活软件激活"><a href="#激活方式一：激活软件激活" class="headerlink" title="激活方式一：激活软件激活"></a>激活方式一：激活软件激活</h2><p>点击<button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/%E6%BF%80%E6%B4%BB'" 
   title="Download"><i class="scoicon sco-arrow-right-bold"></i><span>Download</span></button>，下载完成后打开软件，按照按照软件提示点击，即可激活系统。</p>
 <h2 id="激活方式二：命令激活"><a href="#激活方式二：命令激活" class="headerlink" title="激活方式二：命令激活"></a>激活方式二：命令激活</h2><h3 id="激活通道："><a href="#激活通道：" class="headerlink" title="激活通道："></a>激活通道：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr /skms kms.4330413.xyz &amp;&amp; slmgr /ato </span><br></pre></td></tr></table></figure>
 
