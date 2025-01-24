@@ -265,13 +265,14 @@ console.log(
 <body>
     <!-- 左上角 LOGO -->
     <div class="logo">
-        <a href="https://0564.org" target="_blank">大台目前看不了</a>
+        <a href="https://0564.org" target="_blank">大台看不了</a>
     </div>
 
     <!-- 顶部输入框和按钮 -->
     <div class="controls">
         <input type="text" id="m3u8-url" placeholder="请输入.m3u文件地址">
         <button onclick="loadChannels()">加载节目单</button>
+        <button onclick="loadDefaultChannels()">加载默认节目单</button>
     </div>
 
     <!-- 主内容区域 -->
@@ -336,6 +337,14 @@ console.log(
             }
         }
 
+        // 加载默认节目单
+        async function loadDefaultChannels() {
+            // 设置默认地址到输入框
+            document.getElementById('m3u8-url').value = defaultM3uUrl;
+            // 加载默认节目单
+            await loadChannels(defaultM3uUrl);
+        }
+
         // 解析.m3u文件内容
         function parseM3U(text) {
             const channels = [];
@@ -378,11 +387,9 @@ console.log(
         // 页面加载完成后加载默认节目单
         window.onload = () => {
             // 设置默认地址到输入框
-            const inputElement = document.getElementById('m3u8-url');
-            inputElement.value = defaultM3uUrl;
-
+            document.getElementById('m3u8-url').value = defaultM3uUrl;
             // 加载默认节目单
-            loadChannels();
+            loadDefaultChannels();
         };
     </script>
 </body>
