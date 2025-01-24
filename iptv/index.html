@@ -265,7 +265,7 @@ console.log(
 <body>
     <!-- 左上角 LOGO -->
     <div class="logo">
-        <a href="https://0564.org" target="_blank">CCTV及卫视台看不了</a>
+        <a href="https://0564.org" target="_blank">大台目前看不了</a>
     </div>
 
     <!-- 顶部输入框和按钮 -->
@@ -378,9 +378,11 @@ console.log(
         // 页面加载完成后加载默认节目单
         window.onload = () => {
             // 设置默认地址到输入框
-            document.getElementById('m3u8-url').value = defaultM3uUrl;
+            const inputElement = document.getElementById('m3u8-url');
+            inputElement.value = defaultM3uUrl;
+
             // 加载默认节目单
-            loadChannels(defaultM3uUrl);
+            loadChannels();
         };
     </script>
 </body>
