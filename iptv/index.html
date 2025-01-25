@@ -273,6 +273,7 @@ console.log(
         <input type="text" id="m3u8-url" placeholder="请输入.m3u文件地址">
         <button onclick="loadChannels()">加载节目单</button>
         <button onclick="loadDefaultChannels()">加载默认节目单</button>
+        <button onclick="loadGlobalChannels()">加载全球电视台</button>
     </div>
 
     <!-- 主内容区域 -->
@@ -296,6 +297,9 @@ console.log(
 
         // 默认的.m3u文件地址
         const defaultM3uUrl = 'https://live.kilvn.com/iptv.m3u';
+
+        // 全球电视台的.m3u文件地址
+        const globalM3uUrl = 'https://iptv-org.github.io/iptv/index.m3u';
 
         // 加载.m3u文件并生成电视台列表
         async function loadChannels() {
@@ -342,7 +346,15 @@ console.log(
             // 设置默认地址到输入框
             document.getElementById('m3u8-url').value = defaultM3uUrl;
             // 加载默认节目单
-            await loadChannels(defaultM3uUrl);
+            await loadChannels();
+        }
+
+        // 加载全球电视台节目单
+        async function loadGlobalChannels() {
+            // 设置全球电视台地址到输入框
+            document.getElementById('m3u8-url').value = globalM3uUrl;
+            // 加载全球电视台节目单
+            await loadChannels();
         }
 
         // 解析.m3u文件内容
