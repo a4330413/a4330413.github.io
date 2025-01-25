@@ -254,11 +254,14 @@ console.log(
             align-items: center;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             max-height: calc(100vh - 150px);
+            overflow: hidden; /* 防止播放器溢出 */
         }
 
-        .player video {
+        .player .video-js {
             width: 100%;
             height: 100%;
+            max-width: 100%; /* 限制播放器最大宽度 */
+            max-height: 100%; /* 限制播放器最大高度 */
         }
     </style>
 </head>
