@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>无标题 | 六安极速电脑</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description" content="电视台直播 &amp;#x2F;* 页面布局 *&amp;#x2F; body { font-family: Arial, sans-serif; margin: 0; padding:"><!-- pwa--><script>(win => {
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>无标题 | 六安极速电脑</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description" content="直播台 &amp;#x2F;* 页面布局 *&amp;#x2F; body { font-family: Arial, sans-serif; margin: 0; p"><!-- pwa--><script>(win => {
         win.saveToLocal = {
             set: function setWithExpiry(key, value, ttl) {
                 if (ttl === 0)
@@ -141,7 +141,9 @@ console.log(
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>电视台直播</title>
+    <title>直播台</title>
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <style>
         /* 页面布局 */
         body {
@@ -218,8 +220,8 @@ console.log(
             background-color: #fff;
             padding: 10px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            overflow-y: auto; /* 启用垂直滚动条 */
-            max-height: calc(100vh - 150px); /* 限制高度 */
+            overflow-y: auto;
+            max-height: calc(100vh - 150px);
         }
 
         .channel-list h2 {
@@ -251,16 +253,14 @@ console.log(
             justify-content: center;
             align-items: center;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            max-height: calc(100vh - 150px); /* 限制高度 */
+            max-height: calc(100vh - 150px);
         }
 
         .player video {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
         }
     </style>
-    <!-- 引入hls.js库 -->
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
     <!-- 左上角 LOGO -->
@@ -286,41 +286,42 @@ console.log(
 
         <!-- 右侧播放器 -->
         <div class="player">
-            <video id="video" controls autoplay></video>
+            <video id="video" class="video-js vjs-default-skin" controls autoplay></video>
         </div>
     </div>
 
+    <!-- Video.js 和 HLS 插件 -->
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@latest/dist/videojs-contrib-hls.min.js"></script>
+
     <script>
         // 初始化播放器
-        const video = document.getElementById('video');
-        const channelList = document.getElementById('channel-list');
+        const video = videojs('video', {
+            controls: true,
+            autoplay: true,
+            preload: 'auto',
+        });
 
         // 默认的.m3u文件地址
-        const defaultM3uUrl = 'https://live.kilvn.com/iptv.m3u';
-
+        const defaultM3uUrl = 'iptv.m3u'; // 替换为你的默认 M3U 文件地址
         // 全球电视台的.m3u文件地址
         const globalM3uUrl = 'https://iptv-org.github.io/iptv/index.m3u';
 
         // 加载.m3u文件并生成电视台列表
         async function loadChannels() {
-            // 获取输入框的值
             const m3uUrl = document.getElementById('m3u8-url').value.trim();
-
             if (!m3uUrl) {
                 alert('请输入有效的.m3u文件地址');
                 return;
             }
 
-            // 使用 CORS 代理服务器
-            const proxyUrl = 'https://api.codetabs.com/v1/proxy?quest=';
-            const fullUrl = proxyUrl + m3uUrl;
-
             try {
-                const response = await fetch(fullUrl);
+                const response = await fetch(m3uUrl);
                 const text = await response.text();
                 const channels = parseM3U(text);
 
                 // 清空旧的电视台列表
+                const channelList = document.getElementById('channel-list');
                 channelList.innerHTML = '';
 
                 // 动态生成电视台列表
@@ -343,17 +344,13 @@ console.log(
 
         // 加载默认节目单
         async function loadDefaultChannels() {
-            // 设置默认地址到输入框
             document.getElementById('m3u8-url').value = defaultM3uUrl;
-            // 加载默认节目单
             await loadChannels();
         }
 
         // 加载全球电视台节目单
         async function loadGlobalChannels() {
-            // 设置全球电视台地址到输入框
             document.getElementById('m3u8-url').value = globalM3uUrl;
-            // 加载全球电视台节目单
             await loadChannels();
         }
 
@@ -379,28 +376,13 @@ console.log(
 
         // 切换电视台的函数
         function changeChannel(url) {
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(url);
-                hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                    video.play();
-                });
-            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = url;
-                video.addEventListener('loadedmetadata', () => {
-                    video.play();
-                });
-            } else {
-                alert('您的浏览器不支持播放此视频格式。');
-            }
+            video.src({ src: url, type: 'application/x-mpegURL' });
+            video.play();
         }
 
         // 页面加载完成后加载默认节目单
         window.onload = () => {
-            // 设置默认地址到输入框
             document.getElementById('m3u8-url').value = defaultM3uUrl;
-            // 加载默认节目单
             loadDefaultChannels();
         };
     </script>
