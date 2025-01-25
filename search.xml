@@ -174,107 +174,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南</title>
-    <url>/2024/04/15/TPLINK%20ER%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8%E6%80%8E%E4%B9%88%E5%88%92%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5?%20%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5%E5%88%92%E5%88%86%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h1 id="TPLINK-ER系列路由器怎么划分多网段-路由器分多网段划分设置指南"><a href="#TPLINK-ER系列路由器怎么划分多网段-路由器分多网段划分设置指南" class="headerlink" title="TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南"></a>TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南</h1><p>TPLINK ER系列路由器怎么划分多网段? 在现代网络中，随着网络规模和复杂性的增加，需要将网络划分为多个子网段来提高网络性能和安全性，下面我们就来看看路由器分多网段划分设置指南</p>
-<p>TP-LINK ER系列路由器支持划分多网段，可以针对不同的LAN接口划分网段，即每一个或多个LAN接口对应一个网段；也可以通过一个LAN接口与支持划分802.1Q VLAN的交换机进行对接，实现多网段划分。下面就这两种应用方式介绍必要的设置步骤。</p>
-<h3 id="针对LAN接口实现多网段划分"><a href="#针对LAN接口实现多网段划分" class="headerlink" title="针对LAN接口实现多网段划分"></a>针对LAN接口实现多网段划分</h3><p><strong>【应用拓扑结构】</strong></p>
-<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e2702.jpg"></p>
-<p>注意：建议设置的电脑连接在路由器5号接口，该接口保持默认VLAN1。</p>
-<p>针对上图所示的网络拓扑结构，基本设置步骤如下：</p>
-<p><strong>（1）路由器添加VLAN</strong></p>
-<p>点击“基本设置”—“VLAN设置”， 如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e26e3.jpg"></p>
-<p>点击“新增”，新增vlan2，并设置相关参数。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e26c8.jpg"></p>
-<ul>
-<li><strong>VLAN名称：</strong>任意填写，本例中为“vlan2”；</li>
-<li><strong>VLAN ID：</strong>设置该VLAN的 ID号，本例中为“2”；</li>
-<li><strong>IP地址：</strong>VLAN接口的IP地址，即内部网络的网关地址，本例为“192.168.2.1”；</li>
-<li><strong>子网掩码：</strong>VLAN接口的子网掩码，与IP地址组合确定子网的范围，本例为标准C类子网掩码“255.255.255.0”；</li>
-<li><strong>管理接口：</strong>如果需要通过这个子网访问路由器界面，则勾选，如不需要，可不勾选。</li>
-<li><strong>管理端口成员：</strong>勾选端口3，出口规则设置为“UNTAG”；</li>
-</ul>
-<p>vlan3同理设置。设置完成，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e269b.jpg"></p>
-<p><strong>（2）修改端口PVID</strong></p>
-<p>点击“基本设置”—“端口设置”，修改端口的PVID，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e2670.jpg"></p>
-<ul>
-<li><strong>端口3：</strong>本例中修改PVID为2；</li>
-<li><strong>端口4：</strong>本例中修改PVID为3；</li>
-</ul>
-<p>设置完毕，点击“设置”，保存配置。至此VLAN设置完成。</p>
-<p><strong>（3）添加新增的VLAN的DHCP服务器</strong></p>
-<p>点击“基本设置”—“LAN设置”—“DHCP服务”，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eed60.jpg"></p>
-<p>点击“新增”，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eed47.jpg"></p>
-<ul>
-<li><strong>服务接口：</strong>选择划分的vlan接口，本例中选择“vlan2”。</li>
-<li><strong>开始地址：</strong>填写开始地址，如“192.168.2.100”；</li>
-<li><strong>结束地址：</strong>填写结束地址，如“192.168.2.200”；</li>
-<li><strong>网关地址：</strong>可不填写，也可以填写，本例中设置“192.168.2.1”；</li>
-<li><strong>缺省域名：</strong>不填写；</li>
-<li><strong>首选DNS：</strong>填写当地的宽带线路的首选DNS，本例中设置电信公共DNS服务器IP地址“114.114.114.114”；</li>
-<li><strong>备用DNS：</strong>填写当地的宽带线路的备用DNS，本例中设置谷歌公共DNS服务器IP地址“8.8.8.8”；</li>
-<li><strong>Option60：</strong>不填写；</li>
-<li><strong>Option138：</strong>不填写；</li>
-<li><strong>状态：</strong>“勾选”启用。</li>
-</ul>
-<p>点击“确定”，添加完成。</p>
-<p>VLAN3同理设置。设置完成，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eed1a.jpg"></p>
-<p>至此，路由器划分多网段功能完成。电脑接在端口3下接的交换机可获取到vlan2网段地址；接在端口4下接的交换机可获取到vlan3网段地址，均可以连接外网。</p>
-<h3 id="路由器一个接口对接多个网段（需配合交换机802-1Q-VLAN使用）"><a href="#路由器一个接口对接多个网段（需配合交换机802-1Q-VLAN使用）" class="headerlink" title="路由器一个接口对接多个网段（需配合交换机802.1Q VLAN使用）"></a>路由器一个接口对接多个网段（需配合交换机802.1Q VLAN使用）</h3><p><strong>【应用拓扑结构】</strong></p>
-<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eecef.jpg"></p>
-<p>针对上图所示的网络拓扑结构，基本设置步骤如下：</p>
-<p>（1）路由器添加VLAN</p>
-<p>点击“基本设置”—“VLAN设置”，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e26e3.jpg"></p>
-<p>点击“新增”，新增vlan2，并设置相关参数。如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb76a.jpg"></p>
-<ul>
-<li><strong>VLAN名称：</strong>任意填写，本例中为“vlan2”；</li>
-<li><strong>VLAN ID：</strong>设置该VLAN的 ID号，本例中为“2”；</li>
-<li><strong>IP地址：</strong>VLAN接口的IP地址，即内部网络的网关地址，本例为“192.168.2.1”；</li>
-<li><strong>子网掩码：</strong>VLAN接口的子网掩码，与IP地址组合确定子网的范围，本例为标准C类子网掩码“255.255.255.0”；</li>
-<li><strong>管理接口：</strong>如果需要通过这个子网访问路由器界面，则勾选，如不需要，可不勾选。</li>
-<li><strong>管理端口成员</strong>：勾选端口3，出口规则设置为“TAG”；</li>
-</ul>
-<p>vlan3同理设置。设置完成，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb755.jpg"></p>
-<p>至此VLAN设置完成。</p>
-<p><strong>（2）添加新增的VLAN的DHCP服务器</strong></p>
-<p>点击“基本设置”—“LAN设置”—“DHCP服务”，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb73d.jpg"></p>
-<p>点击“新增”，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb718.jpg"></p>
-<ul>
-<li><strong>服务接口：</strong>选择划分的vlan接口，本例中选择“vlan2”。</li>
-<li><strong>开始地址：</strong>填写开始地址，如“192.168.2.100”；</li>
-<li><strong>结束地址：</strong>填写结束地址，如“192.168.2.200”；</li>
-<li><strong>网关地址：</strong>可不填写，也可以填写，本例中设置“192.168.2.1”；</li>
-<li><strong>缺省域名：</strong>不填写；</li>
-<li><strong>首选DNS：</strong>填写当地的宽带线路的首选DNS，本例中设置电信公共DNS服务器IP地址“114.114.114.114”；</li>
-<li><strong>备用DNS：</strong>填写当地的宽带线路的备用DNS，本例中设置谷歌公共DNS服务器IP地址“8.8.8.8”；</li>
-<li><strong>Option60：</strong>不填写；</li>
-<li><strong>Option138：</strong>不填写；</li>
-<li><strong>状态：</strong>“勾选”启用。</li>
-</ul>
-<p>点击“确定”，添加完成。</p>
-<p>vlan3同理设置。设置完成，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb6e2.jpg"></p>
-<p>至此，路由器划分多网段功能设置完成。接下来配置交换机802.1Q VLAN对接。</p>
-<p><strong>（3）交换机802.1Q VLAN设置</strong></p>
-<p>打开交换机管理界面，对接路由器的交换机的1号接口的端口类型设置为“TRUNK”，如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcd480ea9cb1403705dfc.jpg"></p>
-<p>新增vlan2和vlan3，vlan2包含1号和8号接口；vlan3包含1号和12号接口。添加完成，保存配置。如下图所示。</p>
-<p><img src="https://pic.imgdb.cn/item/661dcd480ea9cb1403705ddf.jpg"></p>
-<p>至此设置完毕，电脑接在交换机8号口下的接入交换机，可获取到vlan2网段地址；接在交换机12号口下的交换机，可获取到vlan3网段地址，均可上网。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>office各版本下载</title>
     <url>/2024/02/22/office%E5%90%84%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<table>
@@ -473,5 +372,106 @@
         <tag>工具软件</tag>
         <tag>共享工具</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南</title>
+    <url>/2024/04/15/TPLINK%20ER%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8%E6%80%8E%E4%B9%88%E5%88%92%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5?%20%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5%E5%88%92%E5%88%86%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h1 id="TPLINK-ER系列路由器怎么划分多网段-路由器分多网段划分设置指南"><a href="#TPLINK-ER系列路由器怎么划分多网段-路由器分多网段划分设置指南" class="headerlink" title="TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南"></a>TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南</h1><p>TPLINK ER系列路由器怎么划分多网段? 在现代网络中，随着网络规模和复杂性的增加，需要将网络划分为多个子网段来提高网络性能和安全性，下面我们就来看看路由器分多网段划分设置指南</p>
+<p>TP-LINK ER系列路由器支持划分多网段，可以针对不同的LAN接口划分网段，即每一个或多个LAN接口对应一个网段；也可以通过一个LAN接口与支持划分802.1Q VLAN的交换机进行对接，实现多网段划分。下面就这两种应用方式介绍必要的设置步骤。</p>
+<h3 id="针对LAN接口实现多网段划分"><a href="#针对LAN接口实现多网段划分" class="headerlink" title="针对LAN接口实现多网段划分"></a>针对LAN接口实现多网段划分</h3><p><strong>【应用拓扑结构】</strong></p>
+<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e2702.jpg"></p>
+<p>注意：建议设置的电脑连接在路由器5号接口，该接口保持默认VLAN1。</p>
+<p>针对上图所示的网络拓扑结构，基本设置步骤如下：</p>
+<p><strong>（1）路由器添加VLAN</strong></p>
+<p>点击“基本设置”—“VLAN设置”， 如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e26e3.jpg"></p>
+<p>点击“新增”，新增vlan2，并设置相关参数。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e26c8.jpg"></p>
+<ul>
+<li><strong>VLAN名称：</strong>任意填写，本例中为“vlan2”；</li>
+<li><strong>VLAN ID：</strong>设置该VLAN的 ID号，本例中为“2”；</li>
+<li><strong>IP地址：</strong>VLAN接口的IP地址，即内部网络的网关地址，本例为“192.168.2.1”；</li>
+<li><strong>子网掩码：</strong>VLAN接口的子网掩码，与IP地址组合确定子网的范围，本例为标准C类子网掩码“255.255.255.0”；</li>
+<li><strong>管理接口：</strong>如果需要通过这个子网访问路由器界面，则勾选，如不需要，可不勾选。</li>
+<li><strong>管理端口成员：</strong>勾选端口3，出口规则设置为“UNTAG”；</li>
+</ul>
+<p>vlan3同理设置。设置完成，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e269b.jpg"></p>
+<p><strong>（2）修改端口PVID</strong></p>
+<p>点击“基本设置”—“端口设置”，修改端口的PVID，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e2670.jpg"></p>
+<ul>
+<li><strong>端口3：</strong>本例中修改PVID为2；</li>
+<li><strong>端口4：</strong>本例中修改PVID为3；</li>
+</ul>
+<p>设置完毕，点击“设置”，保存配置。至此VLAN设置完成。</p>
+<p><strong>（3）添加新增的VLAN的DHCP服务器</strong></p>
+<p>点击“基本设置”—“LAN设置”—“DHCP服务”，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eed60.jpg"></p>
+<p>点击“新增”，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eed47.jpg"></p>
+<ul>
+<li><strong>服务接口：</strong>选择划分的vlan接口，本例中选择“vlan2”。</li>
+<li><strong>开始地址：</strong>填写开始地址，如“192.168.2.100”；</li>
+<li><strong>结束地址：</strong>填写结束地址，如“192.168.2.200”；</li>
+<li><strong>网关地址：</strong>可不填写，也可以填写，本例中设置“192.168.2.1”；</li>
+<li><strong>缺省域名：</strong>不填写；</li>
+<li><strong>首选DNS：</strong>填写当地的宽带线路的首选DNS，本例中设置电信公共DNS服务器IP地址“114.114.114.114”；</li>
+<li><strong>备用DNS：</strong>填写当地的宽带线路的备用DNS，本例中设置谷歌公共DNS服务器IP地址“8.8.8.8”；</li>
+<li><strong>Option60：</strong>不填写；</li>
+<li><strong>Option138：</strong>不填写；</li>
+<li><strong>状态：</strong>“勾选”启用。</li>
+</ul>
+<p>点击“确定”，添加完成。</p>
+<p>VLAN3同理设置。设置完成，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eed1a.jpg"></p>
+<p>至此，路由器划分多网段功能完成。电脑接在端口3下接的交换机可获取到vlan2网段地址；接在端口4下接的交换机可获取到vlan3网段地址，均可以连接外网。</p>
+<h3 id="路由器一个接口对接多个网段（需配合交换机802-1Q-VLAN使用）"><a href="#路由器一个接口对接多个网段（需配合交换机802-1Q-VLAN使用）" class="headerlink" title="路由器一个接口对接多个网段（需配合交换机802.1Q VLAN使用）"></a>路由器一个接口对接多个网段（需配合交换机802.1Q VLAN使用）</h3><p><strong>【应用拓扑结构】</strong></p>
+<p><img src="https://pic.imgdb.cn/item/661dcc350ea9cb14036eecef.jpg"></p>
+<p>针对上图所示的网络拓扑结构，基本设置步骤如下：</p>
+<p>（1）路由器添加VLAN</p>
+<p>点击“基本设置”—“VLAN设置”，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcb8c0ea9cb14036e26e3.jpg"></p>
+<p>点击“新增”，新增vlan2，并设置相关参数。如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb76a.jpg"></p>
+<ul>
+<li><strong>VLAN名称：</strong>任意填写，本例中为“vlan2”；</li>
+<li><strong>VLAN ID：</strong>设置该VLAN的 ID号，本例中为“2”；</li>
+<li><strong>IP地址：</strong>VLAN接口的IP地址，即内部网络的网关地址，本例为“192.168.2.1”；</li>
+<li><strong>子网掩码：</strong>VLAN接口的子网掩码，与IP地址组合确定子网的范围，本例为标准C类子网掩码“255.255.255.0”；</li>
+<li><strong>管理接口：</strong>如果需要通过这个子网访问路由器界面，则勾选，如不需要，可不勾选。</li>
+<li><strong>管理端口成员</strong>：勾选端口3，出口规则设置为“TAG”；</li>
+</ul>
+<p>vlan3同理设置。设置完成，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb755.jpg"></p>
+<p>至此VLAN设置完成。</p>
+<p><strong>（2）添加新增的VLAN的DHCP服务器</strong></p>
+<p>点击“基本设置”—“LAN设置”—“DHCP服务”，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb73d.jpg"></p>
+<p>点击“新增”，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb718.jpg"></p>
+<ul>
+<li><strong>服务接口：</strong>选择划分的vlan接口，本例中选择“vlan2”。</li>
+<li><strong>开始地址：</strong>填写开始地址，如“192.168.2.100”；</li>
+<li><strong>结束地址：</strong>填写结束地址，如“192.168.2.200”；</li>
+<li><strong>网关地址：</strong>可不填写，也可以填写，本例中设置“192.168.2.1”；</li>
+<li><strong>缺省域名：</strong>不填写；</li>
+<li><strong>首选DNS：</strong>填写当地的宽带线路的首选DNS，本例中设置电信公共DNS服务器IP地址“114.114.114.114”；</li>
+<li><strong>备用DNS：</strong>填写当地的宽带线路的备用DNS，本例中设置谷歌公共DNS服务器IP地址“8.8.8.8”；</li>
+<li><strong>Option60：</strong>不填写；</li>
+<li><strong>Option138：</strong>不填写；</li>
+<li><strong>状态：</strong>“勾选”启用。</li>
+</ul>
+<p>点击“确定”，添加完成。</p>
+<p>vlan3同理设置。设置完成，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dccca0ea9cb14036fb6e2.jpg"></p>
+<p>至此，路由器划分多网段功能设置完成。接下来配置交换机802.1Q VLAN对接。</p>
+<p><strong>（3）交换机802.1Q VLAN设置</strong></p>
+<p>打开交换机管理界面，对接路由器的交换机的1号接口的端口类型设置为“TRUNK”，如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcd480ea9cb1403705dfc.jpg"></p>
+<p>新增vlan2和vlan3，vlan2包含1号和8号接口；vlan3包含1号和12号接口。添加完成，保存配置。如下图所示。</p>
+<p><img src="https://pic.imgdb.cn/item/661dcd480ea9cb1403705ddf.jpg"></p>
+<p>至此设置完毕，电脑接在交换机8号口下的接入交换机，可获取到vlan2网段地址；接在交换机12号口下的交换机，可获取到vlan3网段地址，均可上网。</p>
+]]></content>
   </entry>
 </search>
