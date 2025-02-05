@@ -1,3 +1,4 @@
+<script>
 // Hexo 专用 IPv6 智能跳转
 document.addEventListener('DOMContentLoaded', function() {
   const ipv6LinkHandler = function(e) {
@@ -23,8 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3000);
   };
 
-  // 绑定所有带 #ipv6-check 的链接
-  document.querySelectorAll('a[href="#ipv6-check"]').forEach(link => {
-    link.addEventListener('click', ipv6LinkHandler);
+  // 使用 MutationObserver 动态绑定链接事件
+  const observer = new MutationObserver(() => {
+    // 绑定所有带 #ipv6-check 的链接
+    document.querySelectorAll('a[href="#ipv6-check"]').forEach(link => {
+      if (!link.hasAttribute('data-bound')) { // 防止重复绑定
+        link.addEventListener('click', ipv6LinkHandler);
+        link.setAttribute('data-bound', 'true'); // 标记该链接已绑定
+      }
+    });
   });
+
+  // 配置观察选项：监听子节点的变化
+  const config = { childList: true, subtree: true };
+  
+  // 启动 MutationObserver，观察整个文档
+  observer.observe(document.body, config);
 });
+</script>
