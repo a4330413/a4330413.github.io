@@ -1,5 +1,3 @@
-<!-- 插入到 footer 或 head 模板的底部 -->
-<script>
 // Hexo 专用 IPv6 智能跳转
 document.addEventListener('DOMContentLoaded', function() {
   const ipv6LinkHandler = function(e) {
@@ -30,4 +28,3 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', ipv6LinkHandler);
   });
 });
-</script>
