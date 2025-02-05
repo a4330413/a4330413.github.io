@@ -414,6 +414,35 @@
 ]]></content>
   </entry>
   <entry>
+    <title>局域网文件/打印机共享</title>
+    <url>/2024/02/23/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6/%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB/</url>
+    <content><![CDATA[<h1 id="共享文件夹"><a href="#共享文件夹" class="headerlink" title="共享文件夹"></a>共享文件夹</h1><ol>
+<li>彻底退出杀毒软件（360、腾讯电脑管家、火绒、金山毒霸等）。</li>
+<li>点击  <button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/%E5%B7%A5%E5%85%B7/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E8%BD%AF%E4%BB%B6.rar'" 
+  title="Download"><i class="scoicon sco-show-line"></i><span>Download</span></button>下载共享软件，下载完成后解压，右击软件使用管理员身份运行。</li>
+<li>打开软件后，根据提示点击下一步，稍等一会后，点击添加共享，根据需要添加需要共享的文件夹或者磁盘分区。</li>
+<li>其他被共享电脑打开资源管理器，在地址栏内输入 \\共享电脑的计算机名，即可找到共享文件夹，右击共享文件夹发送快捷方式到桌面即可。</li>
+</ol>
+<h1 id="共享打印机"><a href="#共享打印机" class="headerlink" title="共享打印机"></a>共享打印机</h1><ol>
+<li>如需共享打印机，根据上方教程打开共享软件并点击下一步后点击共享打印机。</li>
+<li>找到需要共享的打印机，右击属性，选择共享，勾选共享打印机，确定。</li>
+<li>被共享电脑同上，在资源管理的地址栏中输入 \\共享电脑的计算机名即可找到共享的打印机。</li>
+<li>在共享的打印机上面右击，点连接，再点确定即可完成共享。</li>
+</ol>
+<div>
+<div class="tabs" id="远程协助"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#远程协助-1">共享文件夹</button></li><li class="tab"><button type="button" data-href="#远程协助-2">共享打印机</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="远程协助-1"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354ecd.jpg" alt="0"><br><img src="https://pic.imgdb.cn/item/65d86a1f9f345e8d0335574c.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e9d.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e47.jpg" alt="3"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="远程协助-2"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e02.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1b9f345e8d03354db0.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f41c.jpg" alt="3"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f377.jpg" alt="4"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f2fd.jpg" alt="5"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f27c.jpg" alt="6"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div></div></div>
+
+</div>
+]]></content>
+      <categories>
+        <category>工具软件</category>
+      </categories>
+      <tags>
+        <tag>工具软件</tag>
+        <tag>共享工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法</title>
     <url>/2024/02/23/win10/11%E8%BF%9E%E6%8E%A5%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<h1 id="无法连接到打印机0x000003e3-Win10连接打印机0x000003e3错误的解决方法"><a href="#无法连接到打印机0x000003e3-Win10连接打印机0x000003e3错误的解决方法" class="headerlink" title="无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法"></a><strong>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法</strong></h1><p>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法，近期有许多用户碰到了没法连接到共享打印机的难题，造成没法打印，危害工作中，那麼碰到这个问题要如何解决呢？我们一起来看一下。</p>
@@ -443,35 +472,6 @@
       <tags>
         <tag>帮助文档</tag>
         <tag>共享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>局域网文件/打印机共享</title>
-    <url>/2024/02/23/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6/%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB/</url>
-    <content><![CDATA[<h1 id="共享文件夹"><a href="#共享文件夹" class="headerlink" title="共享文件夹"></a>共享文件夹</h1><ol>
-<li>彻底退出杀毒软件（360、腾讯电脑管家、火绒、金山毒霸等）。</li>
-<li>点击  <button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/%E5%B7%A5%E5%85%B7/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E8%BD%AF%E4%BB%B6.rar'" 
-  title="Download"><i class="scoicon sco-show-line"></i><span>Download</span></button>下载共享软件，下载完成后解压，右击软件使用管理员身份运行。</li>
-<li>打开软件后，根据提示点击下一步，稍等一会后，点击添加共享，根据需要添加需要共享的文件夹或者磁盘分区。</li>
-<li>其他被共享电脑打开资源管理器，在地址栏内输入 \\共享电脑的计算机名，即可找到共享文件夹，右击共享文件夹发送快捷方式到桌面即可。</li>
-</ol>
-<h1 id="共享打印机"><a href="#共享打印机" class="headerlink" title="共享打印机"></a>共享打印机</h1><ol>
-<li>如需共享打印机，根据上方教程打开共享软件并点击下一步后点击共享打印机。</li>
-<li>找到需要共享的打印机，右击属性，选择共享，勾选共享打印机，确定。</li>
-<li>被共享电脑同上，在资源管理的地址栏中输入 \\共享电脑的计算机名即可找到共享的打印机。</li>
-<li>在共享的打印机上面右击，点连接，再点确定即可完成共享。</li>
-</ol>
-<div>
-<div class="tabs" id="远程协助"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#远程协助-1">共享文件夹</button></li><li class="tab"><button type="button" data-href="#远程协助-2">共享打印机</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="远程协助-1"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354ecd.jpg" alt="0"><br><img src="https://pic.imgdb.cn/item/65d86a1f9f345e8d0335574c.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e9d.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e47.jpg" alt="3"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="远程协助-2"><p><img src="https://pic.imgdb.cn/item/65d86a1c9f345e8d03354e02.jpg" alt="1"><br><img src="https://pic.imgdb.cn/item/65d86a1b9f345e8d03354db0.jpg" alt="2"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f41c.jpg" alt="3"><br><img src="https://pic.imgdb.cn/item/65d865ea9f345e8d0328f377.jpg" alt="4"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f2fd.jpg" alt="5"><br><img src="https://pic.imgdb.cn/item/65d865e99f345e8d0328f27c.jpg" alt="6"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div></div></div>
-
-</div>
-]]></content>
-      <categories>
-        <category>工具软件</category>
-      </categories>
-      <tags>
-        <tag>工具软件</tag>
-        <tag>共享工具</tag>
       </tags>
   </entry>
 </search>
