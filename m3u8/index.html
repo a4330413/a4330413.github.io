@@ -1,1051 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>m3u8DL | 六安极速电脑</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description" content="m3u8 downloader &amp;#x2F;*全局设置*&amp;#x2F; html, body { margin: 0; padding: 0; } body::-webkit-scrollbar { display: none} p"><!-- pwa--><script>(win => {
-        win.saveToLocal = {
-            set: function setWithExpiry(key, value, ttl) {
-                if (ttl === 0)
-                    return
-                const now = new Date()
-                const expiryDay = ttl * 86400000
-                const item = {
-                    value: value,
-                    expiry: now.getTime() + expiryDay,
-                }
-                localStorage.setItem(key, JSON.stringify(item))
-            },
-
-            get: function getWithExpiry(key) {
-                const itemStr = localStorage.getItem(key)
-
-                if (!itemStr) {
-                    return undefined
-                }
-                const item = JSON.parse(itemStr)
-                const now = new Date()
-
-                if (now.getTime() > item.expiry) {
-                    localStorage.removeItem(key)
-                    return undefined
-                }
-                return item.value
-            }
-        }
-
-        const DarkModeStatus = localStorage.getItem('theme')
-        if (DarkModeStatus !== null) {
-            if (DarkModeStatus === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark')
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light')
-            }
-        }
-
-        const asideStatus = saveToLocal.get('aside-status')
-        if (asideStatus !== undefined) {
-            if (asideStatus === 'hide') {
-                document.documentElement.classList.add('hide-aside')
-            } else {
-                document.documentElement.classList.remove('hide-aside')
-            }
-        }
-    }
-)(window)
-
-console.log(
-    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
-    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
-);</script><!-- global head--><script>const GLOBAL_CONFIG = {
-    root: '/',
-    algolia: undefined,
-    localsearch: {"preload":false,"path":"/search.xml"},
-    runtime: 'false',
-    lazyload: {
-        enable: false,
-        error: 'https://pic.imgdb.cn/item/65d582a49f345e8d03beb155.png'
-    },
-    hightlight: {
-        enable: true,
-        limit: 200,
-        expand: true,
-        copy: true,
-    },
-    randomlinks: false,
-    lang: {
-        theme: {
-            dark: '已切换至深色模式',
-            light: '已切换至浅色模式',
-        },
-        copy: {
-            success: '复制成功',
-            error: '复制失败',
-        },
-        backtop: '返回顶部',
-        time: {
-            recent: '最近',
-            yesterday: '昨天',
-            berforeyesterday: '前天',
-            daybefore: '天前',
-            runtime: '天',
-        },
-        search: {
-            empty: '找不到你查询的内容：${query}',
-            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
-            placeholder: '输入关键词快速查找',
-        },
-        chs: {
-            chs_to_cht: '繁體中文',
-            cht_to_chs: '简体中文',
-        }
-    },
-    aside: {
-        sayhello: {
-            morning: '一日之计在于晨',
-            noon: '吃饱了才有力气干活',
-            afternoon: '集中精力，攻克难关',
-            night: '不要太劳累了，早睡更健康',
-            goodnight: '睡个好觉，保证精力充沛',
-        },
-        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多","🎮 电竞游戏爱好者"],
-    },
-    covercolor: {
-        enable: true
-    },
-    comment: {
-        enable: false,
-        type: '',
-        commentBarrage: false,
-        randomInfoStart: ["聪敏的","可爱的","美丽的"],
-        randomInfoEnd: ["白菜","小可爱","小仙女"],
-        twikoo: {
-            url: '',
-            accessToken: ''
-        },
-        waline: {
-            url: '',
-        }
-    },
-    lightbox: 'fancybox',
-    rightside: {
-        enable: false
-    },
-    ai: {
-        enable: false,
-        key: '',
-        talk: '我是王卓Sco开发的摘要生成助理ScoGPT，ScoGPT在静态部署时进行摘要的撰写，并且在访客访问时通过ScoCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
-        randomPost: false,
-    },
-    music: {
-        enable: true,
-    },
-    translate: undefined,
-};</script><meta name="generator" content="Hexo 7.1.1"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><a class="music-switch" title="音乐开关" href="javascript:void(0);"><i class="scoicon sco-disc-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>档案</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>多媒体</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://xiaoya.4330413.xyz:4330/"><i class="scoicon sco-film-fill"></i><span>电影</span></a></li><li><a class="site-page child" href="/iptv/index.html"><i class="scoicon sco-film-fill"></i><span>直播</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司服务</span></a><ul class="menus_item_child"><li><a class="site-page child" href="#ipv6-check"><i class="scoicon sco-laptop-line"></i><span>网盘</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>服务与支持</span></a></li><li><a class="site-page child" href="/computertest/index.html"><i class="scoicon sco-dashboard-fill"></i><span>电脑硬件测试</span></a></li><li><a class="site-page child" href="/m3u8/index.html"><i class="scoicon sco-dashboard-fill"></i><span>解析M3U8</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司简介</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="scoicon sco-contacts-fill"></i><span>产品展示</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>联系我们</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%AE%BE%E8%AE%A1%E8%BD%AF%E4%BB%B6/">设计软件<sup>1</sup></a><a href="/tags/adobe/">adobe<sup>1</sup></a><a href="/tags/%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6/">专业软件<sup>1</sup></a><a href="/tags/CorelDraw/">CorelDraw<sup>1</sup></a><a href="/tags/CDR/">CDR<sup>1</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">常用软件<sup>1</sup></a><a href="/tags/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">帮助文档<sup>3</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件<sup>2</sup></a><a href="/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/">模拟器<sup>1</sup></a><a href="/tags/%E5%85%B1%E4%BA%AB/">共享<sup>1</sup></a><a href="/tags/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/">共享工具<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">六安极速电脑</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">m3u8DL</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>档案</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>多媒体</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://xiaoya.4330413.xyz:4330/"><i class="scoicon sco-film-fill"></i><span>电影</span></a></li><li><a class="site-page child" href="/iptv/index.html"><i class="scoicon sco-film-fill"></i><span>直播</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司服务</span></a><ul class="menus_item_child"><li><a class="site-page child" href="#ipv6-check"><i class="scoicon sco-laptop-line"></i><span>网盘</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>服务与支持</span></a></li><li><a class="site-page child" href="/computertest/index.html"><i class="scoicon sco-dashboard-fill"></i><span>电脑硬件测试</span></a></li><li><a class="site-page child" href="/m3u8/index.html"><i class="scoicon sco-dashboard-fill"></i><span>解析M3U8</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司简介</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="scoicon sco-contacts-fill"></i><span>产品展示</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>联系我们</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="scoicon sco-search-line"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="毛静文,Momo">
-  <meta name="keywords" content="m3u8 下载工具, 毛静文的博客,Momo's Blog">
-  <meta name="description" content="m3u8 下载工具,无需下载软件,打开网站即可下载,自动检测,一键下载">
-  <title>m3u8 downloader</title>
-  <style>
-  /*全局设置*/
-  html, body {
-    margin: 0;
-    padding: 0;
+.layout {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+maxWidth768()
+}
+.layout#content-inner {
+  max-width: 1400px;
+}
+.hide-aside.layout {
+  max-width: 1400px;
+}
+.hide-aside.layout > div {
+  width: 100% !important;
+}
+.layout > div:first-child {
+  width: calc(100% - 300px);
+maxWidth1200()
+}
+.layout > div:first-child:not(.recent-posts) {
+  box-shadow: var(--sco-shadow-border);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: var(--sco-card-bg);
+  border: var(--style-border);
+  align-self: flex-start;
+  animation: slide-in 0.6s 0.1s backwards;
+  position: relative;
+  overflow: hidden;
+maxWidth768()
+}
+span.tags-punctuation::before {
+  content: "\e071";
+  font-family: scoicon, serif !important;
+  font-size: 12px;
+  transition: none;
+  margin-right: 2px;
+  opacity: 0.4;
+}
+.hide-aside #page span.tags-punctuation::before {
+  font-size: 16px;
+}
+#post-info span.tags-punctuation::before {
+  font-size: 14px;
+  line-height: 32px;
+}
+.snackbar-container {
+  background: var(--sco-lighttext) !important;
+  color: var(--sco-card-bg) !important;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: center !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  margin: 0 !important;
+  left: 0 !important;
+  height: 60px !important;
+  transform: none !important;
+}
+.snackbar-container p {
+  color: var(--sco-card-bg) !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  font-size: 0.8rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+.snackbar-container .action {
+  color: var(--sco-card-bg) !important;
+  background: var(--sco-lighttext) !important;
+  padding: 4px 6px !important;
+  font-weight: 700;
+  border-radius: 8px !important;
+  transition: 0.3s;
+  border: var(--style-border) !important;
+}
+.snackbar-container .action:hover {
+  color: var(--sco-lighttext) !important;
+  background: var(--sco-card-bg) !important;
+}
+.snackbar-container::after {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--sco-white);
+  opacity: 0.1;
+  content: "";
+  animation: snackbar-progress var(--sco-snackbar-time) linear forwards;
+  pointer-events: none;
+}
+#universe {
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+[data-theme=light] #universe {
+  display: none;
+}
+@-moz-keyframes snackbar-progress {
+  from {
+    width: 0;
   }
-  body::-webkit-scrollbar { display: none}
-  p {
-    margin: 0;
-  }
-  [v-cloak] {
-    display: none;
-  }
-  #m-app {
-    height: 100%;
+  to {
     width: 100%;
-    text-align: center;
-    padding: 10px 50px 80px;
-    box-sizing: border-box;
   }
-  .m-p-action {
-    margin: 20px auto;
-    max-width: 1100px;
+}
+@-webkit-keyframes snackbar-progress {
+  from {
+    width: 0;
+  }
+  to {
     width: 100%;
-    font-size: 35px;
-    text-align: center;
-    font-weight: bold;
   }
-  .m-p-other, .m-p-tamper, .m-p-github, .m-p-language {
-    position: fixed;
-    right: 50px;
-    background-color: #eff3f6;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-    color: #24292e;
-    border: 1px solid rgba(27, 31, 35, .2);
-    border-radius: 3px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 6px 12px;
-    z-index: 99;
+}
+@-o-keyframes snackbar-progress {
+  from {
+    width: 0;
   }
-  .m-p-help {
-    position: fixed;
-    right: 50px;
-    top: 50px;
-    width: 30px;
-    height: 30px;
-    color: #666666;
-    z-index: 2;
-    line-height: 30px;
-    font-weight: bolder;
-    border-radius: 50%;
-    border: 1px solid rgba(27, 31, 35, .2);
-    cursor: pointer;
-    background-color: #eff3f6;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+  to {
+    width: 100%;
   }
-  .m-p-github:hover, .m-p-other:hover, .m-p-tamper:hover, .m-p-help:hover, .m-p-language:hover {
-    opacity: 0.9;
+}
+@keyframes snackbar-progress {
+  from {
+    width: 0;
   }
-  .m-p-language {
-    bottom: 70px;
+  to {
+    width: 100%;
   }
-  .m-p-other {
-    bottom: 110px;
-  }
-  .m-p-tamper {
-    bottom: 30px;
-  }
-  .m-p-github {
-    bottom: 150px;
-  }
-  /*广告*/
-
-@keyframes upAnimation {
-0% {
-transform: rotate(0deg);
-transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
 }
-
-10% {
-  transform: rotate(-12deg);
-  transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
-}
-
-20% {
-  transform: rotate(12deg);
-  transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
-}
-
-28% {
-  transform: rotate(-10deg);
-  transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
-}
-
-36% {
-  transform: rotate(10deg);
-  transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
-}
-
-42% {
-  transform: rotate(-8deg);
-  transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
-}
-
-48% {
-  transform: rotate(8deg);
-  transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
-}
-
-52% {
-  transform: rotate(-4deg);
-  transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
-}
-
-56% {
-  transform: rotate(4deg);
-  transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
-}
-
-60% {
-  transform: rotate(0deg);
-  transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
-}
-
-100% {
-  transform: rotate(0deg);
-  transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
-}
-}
-/*顶部信息录入*/
-.m-p-temp-url {
-padding-top: 50px;
-padding-bottom: 10px;
-width: 100%;
-color: #999999;
-text-align: left;
-font-style: italic;
-word-break: break-all;
-}
-.m-p-input-container {
-display: flex;
-}
-.m-p-input-container input {
-flex: 1;
-margin-bottom: 30px;
-display: block;
-width: 280px;
-padding: 16px;
-font-size: 24px;
-border-radius: 4px;
-box-shadow: none;
-color: #444444;
-border: 1px solid #cccccc;
-}
-.m-p-input-container .range-input {
-margin-left: 10px;
-flex: 0 0 100px;
-width: 100px;
-box-sizing: border-box;
-}
-.m-p-input-container div {
-position: relative;
-display: inline-block;
-margin-left: 10px;
-height: 60px;
-line-height: 60px;
-font-size: 24px;
-color: white;
-cursor: pointer;
-border-radius: 4px;
-border: 1px solid #eeeeee;
-background-color: #3D8AC7;
-opacity: 1;
-transition: 0.3s all;
-}
-.m-p-input-container div:hover {
-opacity: 0.9;
-}
-.m-p-input-container div {
-width: 200px;
-}
-.m-p-input-container .disable {
-cursor: not-allowed;
-background-color: #dddddd;
-}
-/*下载状态*/
-.m-p-line {
-margin: 20px 0 50px;
-vertical-align: top;
-width: 100%;
-height: 5px;
-border-bottom: dotted;
-}
-.m-p-tips {
-width: 100%;
-color: #999999;
-text-align: left;
-font-style: italic;
-word-break: break-all;
-}
-.m-p-tips p {
-width: 100px;
-display: inline-block;
-}
-.m-p-tips.error-tips{
-color: #DC5350;
-}
-.m-p-segment {
-text-align: left;
-}
-.m-p-segment .item {
-display: inline-block;
-margin: 10px 6px;
-width: 50px;
-height: 40px;
-color: white;
-line-height: 40px;
-text-align: center;
-border-radius: 4px;
-cursor: help;
-border: solid 1px #eeeeee;
-background-color: #dddddd;
-transition: 0.3s all;
-}
-.m-p-segment .finish {
-background-color: #0ACD76;
-}
-.m-p-segment .error {
-cursor: pointer;
-background-color: #DC5350;
-}
-.m-p-segment .error:hover {
-opacity: 0.9;
-}
-.m-p-cross, .m-p-final {
-display: inline-block;
-width: 100%;
-height: 50px;
-line-height: 50px;
-font-size: 20px;
-color: white;
-cursor: pointer;
-border-radius: 4px;
-border: 1px solid #eeeeee;
-background-color: #3D8AC7;
-opacity: 1;
-transition: 0.3s all;
-}
-.m-p-final {
-margin-top: 10px;
-text-decoration: none;
-}
-.m-p-force, .m-p-retry {
-position: absolute;
-right: 50px;
-display: inline-block;
-padding: 6px 12px;
-font-size: 18px;
-color: white;
-cursor: pointer;
-border-radius: 4px;
-border: 1px solid #eeeeee;
-background-color: #3D8AC7;
-opacity: 1;
-transition: 0.3s all;
-}
-.m-p-retry {
-right: 250px;
-}
-.m-p-force:hover, .m-p-retry:hover {
-opacity: 0.9;
-}
-
-</style>
-</head>
-
-<body>
-<div id="loading">
-  页面加载中，请耐心等待...
-  <h1 style="white-space: pre;">
-    推荐一个 m3u8 网页版提取工具，无需下载软件，打开网站即可下载，自动检测，一键下载。
-    工具链接：https://blog.luckly-mjw.cn/tool-show/m3u8-downloader/index.html
-    工具教程：https://segmentfault.com/a/1190000021847172?_ea=32289224
-    <img src="https://upyun.luckly-mjw.cn/Assets/blog/m3u8-downloader-121-75.jpeg" alt="m3u8 视频下载工具" title="logo"/>
-    <a target="_blank" href="https://blog.luckly-mjw.cn/tool-show/m3u8-downloader/index.html">点击跳转</a>
-  </h1>
-</div>
-<section id="m-app" v-cloak>
-  <!--顶部操作提示-->
-  <section class="m-p-action g-box"></section>
-  <a class="m-p-help" target="_blank" href="https://segmentfault.com/a/1190000021847172">?</a>
-  <a class="m-p-tamper" target="_blank" href="https://blog.luckly-mjw.cn/tool-show/m3u8-downloader/m3u8-downloader.user.js">手动添加油猴插件</a>
-  <a class="m-p-github" target="_blank" href="https://github.com/Momo707577045/m3u8-downloader">github</a>
-  <a class="m-p-other" target="_blank" href="http://blog.luckly-mjw.cn/tool-show/index.html">其他实用工具</a>
-  <a class="m-p-language" target="_blank" rel="noopener" href="http://blog.luckly-mjw.cn/tool-show/m3u8-downloader/index-en.html">English version</a>
-
-<!--广告-->
-
-<!--文件载入-->
-
-<div class="m-p-temp-url">测试链接：http://1257120875.vod2.myqcloud.com/0ef121cdvodtransgzp1257120875/3055695e5285890780828799271/v.f230.m3u8</div>
-  <section class="m-p-input-container">
-    <input type="text" v-model="url" :disabled="downloading" placeholder="请输入 m3u8 链接">
-
-<!--范围查询-->
-<template v-if="!downloading || rangeDownload.isShowRange">
-  <div v-if="!rangeDownload.isShowRange" @click="getM3U8(true)">特定范围下载</div>
-  <template v-else>
-    <input class="range-input" type="number" v-model="rangeDownload.startSegment" :disabled="downloading" placeholder="起始片段">
-    <input class="range-input" type="number" v-model="rangeDownload.endSegment" :disabled="downloading" placeholder="截止片段">
-  </template>
-</template>
-
-<!--还未开始下载-->
-<template v-if="!downloading">
-  <div @click="getM3U8(false)">原格式下载</div>
-  <div @click="getMP4">转码为MP4下载</div>
-</template>
-<div v-else-if="finishNum === rangeDownload.targetSegment && rangeDownload.targetSegment > 0" class="disable">下载完成</div>
-<div v-else @click="togglePause">  &#123;&#123; isPause ? '恢复下载' : '暂停下载' &#125;&#125;
-</div>
-</section>
-
-<div class="m-p-cross" @click="copyCode">当无法下载，资源发生跨域限制时，在视频源页面打开控制台，注入代码解决，点击本按钮复制代码</div>
-  <a class="m-p-final" target="_blank" href="https://segmentfault.com/a/1190000025182822">下载的视频看不了？试试这个终结解决方案「无差别视频提取工具」，有配套「油猴」插件啦！！！</a>
-
-<template v-if="finishList.length > 0">
-<div class="m-p-line"></div>
-<div class="m-p-retry" v-if="errorNum && downloadIndex >= rangeDownload.targetSegment" @click="retryAll">重新下载错误片段</div>
-<div class="m-p-force" v-if="mediaFileList.length" @click="forceDownload">强制下载现有片段</div>
-<div class="m-p-tips">待下载碎片总量：，已下载：，错误：，进度：NaN%</div>
-<div class="m-p-tips" :class="[errorNum ? 'error-tips' : '']">若某视频碎片下载发生错误，将标记为红色，可点击相应图标进行重试</div>
-<section class="m-p-segment">
-<div class="item" v-for="(item, index) in finishList" :class="[item.status]" :title="item.title" @click="retry(index)">NaN</div>
-</section>
-</template>
-
-</section>
-</body>
-
-<script>
-var _hmt = _hmt || [];
-(function () {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?1f12b0865d866ae1b93514870d93ce89";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-<!--vue 前端框架-->
-
-<script src="https://upyun.luckly-mjw.cn/lib/vue.js"></script>
-
-<script src="https://upyun.luckly-mjw.cn/lib/aes-decryptor.js"></script>
-
-<script src="https://upyun.luckly-mjw.cn/lib/mux-mp4.js"></script>
-
-<script>
-  
-// script注入
-document.getElementById('loading') && document.getElementById('loading').remove()
-new Vue({
-  el: '#m-app',
-
-  data() {
-    return {
-      url: '', // 在线链接
-      tips: 'm3u8 视频在线提取工具', // 顶部提示
-      isPause: false, // 是否暂停下载
-      isGetMP4: false, // 是否转码为 MP4 下载
-      durationSecond: 0, // 视频持续时长
-      isShowRefer: true, // 是否显示推送
-      downloading: false, // 是否下载中
-      beginTime: '', // 开始下载的时间
-      errorNum: 0, // 错误数
-      finishNum: 0, // 已下载数
-      downloadIndex: 0, // 当前下载片段
-      finishList: [], // 下载完成项目
-      tsUrlList: [], // ts URL数组
-      mediaFileList: [], // 下载的媒体数组
-      rangeDownload: { // 特定范围下载
-        isShowRange: false, // 是否显示范围下载
-        startSegment: '', // 起始片段
-        endSegment: '', // 截止片段
-        targetSegment: 1, // 待下载片段
-      },
-      aesConf: { // AES 视频解密配置
-        method: '', // 加密算法
-        uri: '', // key 所在文件路径
-        iv: '', // 偏移值
-        key: '', // 秘钥
-        decryptor: null, // 解码器对象
-
-        stringToBuffer: function (str) {
-          return new TextEncoder().encode(str)
-        },
-      },
-    }
-  },
-
-  created() {
-    this.getSource();
-    window.addEventListener('keyup', this.onKeyup)
-  },
-
-  beforeDestroy() {
-    window.removeEventListener('keyup', this.onKeyup)
-  },
-
-  methods: {
-    // 获取链接中携带的资源链接
-    getSource() {
-      let { href } = location
-      if (href.indexOf('?source=') > -1) {
-        this.url = href.split('?source=')[1]
-      }
-    },
-
-    // 退出弹窗
-    onKeyup(event) {
-      if (event.keyCode === 13) { // 键入ESC
-        this.getM3U8()
-      }
-    },
-
-    // ajax 请求
-    ajax(options) {
-      options = options || {};
-      let xhr = new XMLHttpRequest();
-      if (options.type === 'file') {
-        xhr.responseType = 'arraybuffer';
-      }
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          let status = xhr.status;
-          if (status >= 200 && status < 300) {
-            options.success && options.success(xhr.response);
-          } else {
-            options.fail && options.fail(status);
-          }
-        }
-      };
-
-      xhr.open("GET", options.url, true);
-      xhr.send(null);
-    },
-
-    // 合成URL
-    applyURL(targetURL, baseURL) {
-      baseURL = baseURL || location.href
-      if (targetURL.indexOf('http') === 0) {
-        return targetURL
-      } else if (targetURL[0] === '/') {
-        let domain = baseURL.split('/')
-        return domain[0] + '//' + domain[2] + targetURL
-      } else {
-        let domain = baseURL.split('/')
-        domain.pop()
-        return domain.join('/') + '/' + targetURL
-      }
-    },
-
-    // 解析为 mp4 下载
-    getMP4() {
-      this.isGetMP4 = true
-      this.getM3U8()
-    },
-
-    // 获取在线文件
-    getM3U8(onlyGetRange) {
-      if (!this.url) {
-        alert('请输入链接')
-        return
-      }
-      if (this.url.toLowerCase().indexOf('.m3u8') === -1) {
-        alert('链接有误，请重新输入')
-        return
-      }
-      if (this.downloading) {
-        alert('资源下载中，请稍后')
-        return
-      }
-
-      // 在下载页面才触发，代码注入的页面不需要校验
-      // 当前协议不一致，切换协议
-      if (location.href.indexOf('blog.luckly-mjw.cn') > -1 && this.url.indexOf(location.protocol) === -1) {
-        //alert('当前协议不一致，跳转至正确页面重新下载')
-        location.href = `${this.url.split(':')[0]}://blog.luckly-mjw.cn/tool-show/m3u8-downloader/index.html?source=${this.url}`
-        return
-      }
-
-      // 在下载页面才触发，修改页面 URL，携带下载路径，避免刷新后丢失
-      if (location.href.indexOf('blog.luckly-mjw.cn') > -1) {
-        window.history.replaceState(null, '', `${location.href.split('?')[0]}?source=${this.url}`)
-      }
-
-      this.tips = 'm3u8 文件下载中，请稍后'
-      this.beginTime = new Date()
-      this.ajax({
-        url: this.url,
-        success: (m3u8Str) => {
-          this.tsUrlList = []
-          this.finishList = []
-
-          // 提取 ts 视频片段地址
-          m3u8Str.split('\n').forEach((item) => {
-            if (item.toLowerCase().indexOf('.ts') > -1 || item.toLowerCase().indexOf('.image') > -1) {
-              this.tsUrlList.push(this.applyURL(item, this.url))
-              this.finishList.push({
-                title: item,
-                status: ''
-              })
-            }
-          })
-
-          // 仅获取视频片段数
-          if (onlyGetRange) {
-            this.rangeDownload.isShowRange = true
-            this.rangeDownload.endSegment = this.tsUrlList.length
-            this.rangeDownload.targetSegment = this.tsUrlList.length
-            return
-          } else {
-            let startSegment = Math.max(this.rangeDownload.startSegment || 1, 1) // 最小为 1
-            let endSegment = Math.max(this.rangeDownload.endSegment || this.tsUrlList.length, 1)
-            startSegment = Math.min(startSegment, this.tsUrlList.length) // 最大为 this.tsUrlList.length
-            endSegment = Math.min(endSegment, this.tsUrlList.length)
-            this.rangeDownload.startSegment = Math.min(startSegment, endSegment)
-            this.rangeDownload.endSegment = Math.max(startSegment, endSegment)
-            this.rangeDownload.targetSegment = this.rangeDownload.endSegment - this.rangeDownload.startSegment + 1
-            this.downloadIndex = this.rangeDownload.startSegment - 1
-            this.downloading = true
-          }
-
-          // 获取需要下载的 MP4 视频长度
-          if (this.isGetMP4) {
-            let infoIndex = 0
-            m3u8Str.split('\n').forEach(item => {
-              if (item.toUpperCase().indexOf('#EXTINF:') > -1) { // 计算视频总时长，设置 mp4 信息时使用
-                infoIndex++
-                if (this.rangeDownload.startSegment <= infoIndex && infoIndex <= this.rangeDownload.endSegment) {
-                  this.durationSecond += parseFloat(item.split('#EXTINF:')[1])
-                }
-              }
-            })
-          }
-
-          // 检测视频 AES 加密
-          if (m3u8Str.indexOf('#EXT-X-KEY') > -1) {
-            this.aesConf.method = (m3u8Str.match(/(.*METHOD=([^,\s]+))/) || ['', '', ''])[2]
-            this.aesConf.uri = (m3u8Str.match(/(.*URI="([^"]+))"/) || ['', '', ''])[2]
-            this.aesConf.iv = (m3u8Str.match(/(.*IV=([^,\s]+))/) || ['', '', ''])[2]
-            this.aesConf.iv = this.aesConf.iv ? this.aesConf.stringToBuffer(this.aesConf.iv) : ''
-            this.aesConf.uri = this.applyURL(this.aesConf.uri, this.url)
-
-            // let params = m3u8Str.match(/#EXT-X-KEY:([^,]*,?METHOD=([^,]+))?([^,]*,?URI="([^,]+)")?([^,]*,?IV=([^,^\n]+))?/)
-            // this.aesConf.method = params[2]
-            // this.aesConf.uri = this.applyURL(params[4], this.url)
-            // this.aesConf.iv = params[6] ? this.aesConf.stringToBuffer(params[6]) : ''
-            this.getAES();
-          } else if (this.tsUrlList.length > 0) { // 如果视频没加密，则直接下载片段，否则先下载秘钥
-            this.downloadTS()
-          } else {
-            this.alertError('资源为空，请查看链接是否有效')
-          }
-        },
-        fail: () => {
-          this.alertError('链接不正确，请查看链接是否有效')
-        }
-      })
-    },
-
-    // 获取AES配置
-    getAES() {
-      alert('视频被 AES 加密，点击确认，进行视频解码')
-      this.ajax({
-        type: 'file',
-        url: this.aesConf.uri,
-        success: (key) => {
-          // console.log('getAES', key)
-          // this.aesConf.key = this.aesConf.stringToBuffer(key)
-          this.aesConf.key = key
-          this.aesConf.decryptor = new AESDecryptor()
-          this.aesConf.decryptor.constructor()
-          this.aesConf.decryptor.expandKey(this.aesConf.key);
-          this.downloadTS()
-        },
-        fail: () => {
-          this.alertError('视频已进行定制化加密，不提供定制化解密下载')
-        }
-      })
-    },
-
-    // ts 片段的 AES 解码
-    aesDecrypt(data, index) {
-      let iv = this.aesConf.iv || new Uint8Array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, index])
-      return this.aesConf.decryptor.decrypt(data, 0, iv.buffer || iv, true)
-    },
-
-    // 下载分片
-    downloadTS() {
-      this.tips = 'ts 视频碎片下载中，请稍后'
-      let download = () => {
-        let isPause = this.isPause // 使用另一个变量来保持下载前的暂停状态，避免回调后没修改
-        let index = this.downloadIndex
-        this.downloadIndex++
-        if (this.finishList[index] && this.finishList[index].status === '') {
-          this.ajax({
-            url: this.tsUrlList[index],
-            type: 'file',
-            success: (file) => {
-              this.dealTS(file, index, () => this.downloadIndex < this.rangeDownload.endSegment && !isPause && download())
-            },
-            fail: () => {
-              this.errorNum++
-              this.finishList[index].status = 'error'
-              if (this.downloadIndex < this.rangeDownload.endSegment) {
-                !isPause && download()
-              }
-            }
-          })
-        } else if (this.downloadIndex < this.rangeDownload.endSegment) { // 跳过已经成功的片段
-          !isPause && download()
-        }
-      }
-
-      // 建立多少个 ajax 线程
-      for (let i = 0; i < Math.min(10, this.rangeDownload.targetSegment - this.finishNum); i++) {
-        download(i)
-      }
-    },
-
-    // 处理 ts 片段，AES 解密、mp4 转码
-    dealTS(file, index, callback) {
-      const data = this.aesConf.uri ? this.aesDecrypt(file, index) : file
-      this.conversionMp4(data, index, (afterData) => { // mp4 转码
-        this.mediaFileList[index - this.rangeDownload.startSegment + 1] = afterData // 判断文件是否需要解密
-        this.finishList[index].status = 'finish'
-        this.finishNum++
-        if (this.finishNum === this.rangeDownload.targetSegment) {
-          this.downloadFile(this.mediaFileList, this.formatTime(this.beginTime, 'YYYY_MM_DD hh_mm_ss'))
-        }
-        callback && callback()
-      })
-    },
-
-    // 转码为 mp4
-    conversionMp4(data, index, callback) {
-      if (this.isGetMP4) {
-        let transmuxer = new muxjs.Transmuxer({
-          keepOriginalTimestamps: true,
-          duration: parseInt(this.durationSecond),
-        });
-        transmuxer.on('data', segment => {
-          if (index === this.rangeDownload.startSegment - 1) {
-            let data = new Uint8Array(segment.initSegment.byteLength + segment.data.byteLength);
-            data.set(segment.initSegment, 0);
-            data.set(segment.data, segment.initSegment.byteLength);
-            callback(data.buffer)
-          } else {
-            callback(segment.data)
-          }
-        })
-        transmuxer.push(new Uint8Array(data));
-        transmuxer.flush();
-      } else {
-        callback(data)
-      }
-    },
-
-    // 暂停与恢复
-    togglePause() {
-      this.isPause = !this.isPause
-      !this.isPause && this.retryAll()
-    },
-
-    // 重新下载某个片段
-    retry(index) {
-      if (this.finishList[index].status === 'error') {
-        this.finishList[index].status = ''
-        this.ajax({
-          url: this.tsUrlList[index],
-          type: 'file',
-          success: (file) => {
-            this.errorNum--
-            this.dealTS(file, index)
-          },
-          fail: () => {
-            this.finishList[index].status = 'error'
-          }
-        })
-      }
-    },
-
-    // 重新下载所有错误片段
-    retryAll() {
-      this.finishList.forEach((item) => { // 重置所有片段状态
-        if (item.status === 'error') {
-          item.status = ''
-        }
-      })
-      this.errorNum = 0
-      this.downloadIndex = this.rangeDownload.startSegment - 1
-      this.downloadTS()
-    },
-
-    // 下载整合后的TS文件
-    downloadFile(fileDataList, fileName) {
-      this.tips = 'ts 碎片整合中，请留意浏览器下载'
-      let fileBlob = null
-      let a = document.createElement('a')
-      if (this.isGetMP4) {
-        fileBlob = new Blob(fileDataList, { type: 'video/mp4' }) // 创建一个Blob对象，并设置文件的 MIME 类型
-        a.download = fileName + '.mp4'
-      } else {
-        fileBlob = new Blob(fileDataList, { type: 'video/MP2T' }) // 创建一个Blob对象，并设置文件的 MIME 类型
-        a.download = fileName + '.ts'
-      }
-      a.href = URL.createObjectURL(fileBlob)
-      a.style.display = 'none'
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-    },
-
-    // 格式化时间
-    formatTime(date, formatStr) {
-      const formatType = {
-        Y: date.getFullYear(),
-        M: date.getMonth() + 1,
-        D: date.getDate(),
-        h: date.getHours(),
-        m: date.getMinutes(),
-        s: date.getSeconds(),
-      }
-      return formatStr.replace(
-        /Y+|M+|D+|h+|m+|s+/g,
-        target => (new Array(target.length).join('0') + formatType[target[0]]).substr(-target.length)
-      )
-    },
-
-    // 强制下载现有片段
-    forceDownload() {
-      if (this.mediaFileList.length) {
-        this.downloadFile(this.mediaFileList, this.formatTime(this.beginTime, 'YYYY_MM_DD hh_mm_ss'))
-      } else {
-        alert('当前无已下载片段')
-      }
-    },
-
-    // 发生错误，进行提示
-    alertError(tips) {
-      alert(tips)
-      this.downloading = false
-      this.tips = 'm3u8 视频在线提取工具';
-    },
-
-    // 拷贝本页面本身，解决跨域问题
-    copyCode() {
-      if (this.tips !== '代码下载中，请稍后') {
-        this.tips = '代码下载中，请稍后';
-        this.ajax({
-          url: './index.html',
-          success: (fileStr) => {
-            let fileList = fileStr.split(`<!--vue 前端框架--\>`);
-            let dom = fileList[0];
-            let script = fileList[1] + fileList[2];
-            script = script.split('// script注入');
-            script = script[1] + script[2];
-
-            if (this.url) {
-              script = script.replace(`url: '', // 在线链接`, `url: '${this.url}',`);
-            }
-
-            let codeStr = `
-          // 注入html
-          let $section = document.createElement('section')
-          $section.innerHTML = \`${dom}\`
-          $section.style.width = '100%'
-          $section.style.height = '800px'
-          $section.style.top = '0'
-          $section.style.left = '0'
-          $section.style.position = 'relative'
-          $section.style.zIndex = '9999'
-          $section.style.backgroundColor = 'white'
-          document.body.appendChild($section);
-
-          // 加载 ASE 解密
-          let $ase = document.createElement('script')
-          $ase.src = 'https://upyun.luckly-mjw.cn/lib/aes-decryptor.js'
-
-          // 加载 mp4 转码
-          let $mp4 = document.createElement('script')
-          $mp4.src = 'https://upyun.luckly-mjw.cn/lib/mux-mp4.js'
-
-          // 加载 vue
-          let $vue = document.createElement('script')
-          $vue.src = 'https://upyun.luckly-mjw.cn/lib/vue.js'
-
-          // 监听 vue 加载完成，执行业务代码
-          $vue.addEventListener('load', () => {${script}})
-          document.body.appendChild($vue);
-          document.body.appendChild($mp4);
-          document.body.appendChild($ase);
-          alert('注入成功，请滚动到页面底部，若白屏则等待资源加载')
-          `;
-            this.copyToClipboard(codeStr);
-            this.tips = '复制成功，打开视频网页控制台，注入本代码';
-          },
-          fail: () => {
-            this.alertError('链接不正确，请查看链接是否有效');
-          },
-        })
-      }
-    },
-
-    // 拷贝剪切板
-    copyToClipboard(content) {
-      clearTimeout(this.timeouter)
-
-      if (!document.queryCommandSupported('copy')) {
-        return false
-      }
-
-      let $input = document.createElement('textarea')
-      $input.style.opacity = '0'
-      $input.value = content
-      document.body.appendChild($input)
-      $input.select()
-
-      const result = document.execCommand('copy')
-      document.body.removeChild($input)
-      $input = null
-
-      return result
-    },
-
-  }
-})
-// script注入
-</script>
-
-</html>
-</div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">六安极速电脑</span></div><div class="footer-bar-description">来自六安极速电脑 - 六安本地的电脑维修/网络/安防等服务商的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg" alt="返回顶部"></div></div><div id="sco-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2025 By&nbsp;<a class="footer-bar-link" href="/">六安极速电脑</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/macy/2.5.1/macy.min.js"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
-</script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.staticfile.org/meting/2.0.1/Meting.min.js"></script><script>const meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
-</script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="/js/music.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><script src="https://cdn.staticfile.org/lunr.js/2.3.9/lunr.min.js"></script></div><div id="js-pjax"><script id="config-diff">var PAGE_CONFIG = {
-    is_post: false,
-    is_page: true,
-    is_home: false,
-    page: '',
-    toc: false,
-    comment: false,
-}
-</script></div><!-- newest comment--><!-- pjax--><script>let pjaxSelectors = [
-    'title',
-    '#body-wrap',
-    '#site-config',
-    'meta[name="description"]',
-    '#js-pjax',
-    'meta[property^="og:"]',
-]
-
-const pjax = new Pjax({
-    elements: 'a:not([target="_blank"])',
-    selectors: pjaxSelectors,
-    cacheBust: false,
-    analytics: false,
-    scrollRestoration: false
-})
-
-document.querySelectorAll('script[data-pjax]').forEach(item => {
-    const newScript = document.createElement('script')
-    const content = item.text || item.textContent || item.innerHTML || ""
-    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-    newScript.appendChild(document.createTextNode(content))
-    item.parentNode.replaceChild(newScript, item)
-})
-
-document.addEventListener('pjax:complete', () => {
-    window.refreshFn()
-})
-
-document.addEventListener('pjax:error', (e) => {
-    if (e.request.status === 404) {
-        pjax.loadUrl('/404.html')
-    }
-})</script><!-- theme--><script>initTheme = () => {
-    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const cachedMode = saveToLocal.get('theme');
-    if (cachedMode === undefined) {
-        const nowMode =
-            isDarkMode ? 'dark' : 'light'
-        document.documentElement.setAttribute('data-theme', nowMode);
-    } else {
-        document.documentElement.setAttribute('data-theme', cachedMode);
-    }
-}
-initTheme()</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="scoicon sco-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.4.7"></script><!-- music--><div class="needEndHide" id="nav-music" onclick="sco.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="8407304077" server="netease" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random" theme="var(--sco-main)"></meting-js></div></body></html><script>const posts=["2024/11/27/兄弟打印机清零教程/","2024/09/21/从天涯论坛1999-2023神贴看中国互联网20年变化/","2024/04/15/TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南/","2024/03/11/雷电模拟器9绿色免安装/","2024/03/11/Macbook / iMac bootcamp 下载/","2024/02/27/CorelDRAW下载/","2024/02/23/win10/11连接共享打印机报错的解决办法/","2024/02/23/局域网文件/打印机共享/","2024/02/22/Adobe Photoshop各版本下载/","2024/02/22/office各版本下载/","2024/02/19/远程协助/","2024/02/18/系统激活/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
+<script>const posts=["2024/02/22/Adobe Photoshop各版本下载/","2024/02/27/CorelDRAW下载/","2024/04/15/TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南/","2024/02/22/office各版本下载/","2024/09/21/从天涯论坛1999-2023神贴看中国互联网20年变化/","2024/11/27/兄弟打印机清零教程/","2024/02/18/系统激活/","2024/02/19/远程协助/","2024/03/11/雷电模拟器9绿色免安装/","2024/03/11/Macbook / iMac bootcamp 下载/","2024/02/23/win10/11连接共享打印机报错的解决办法/","2024/02/23/局域网文件/打印机共享/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
