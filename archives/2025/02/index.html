@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>文章2025 | 六安极速电脑</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description"><!-- pwa--><meta name="theme-color" content="#ffffff"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><link rel="mask-icon" href="https://pic1.imgdb.cn/item/67a348e9d0e0a243d4fbf841.png" color="#ffffff"><link rel="apple-touch-icon" sizes="180x180" href="https://pic1.imgdb.cn/item/67a348e9d0e0a243d4fbf841.png"><link rel="icon" type="image/png" sizes="16x16" href="https://pic1.imgdb.cn/item/67a348ead0e0a243d4fbf842.png"><link rel="icon" type="image/png" sizes="32x32" href="https://pic1.imgdb.cn/item/67a34870d0e0a243d4fbf834.png"><link rel="bookmark" href="https://pic1.imgdb.cn/item/67a348e9d0e0a243d4fbf841.png"><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
+    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: 'false',
+    lazyload: {
+        enable: false,
+        error: 'https://pic.imgdb.cn/item/65d582a49f345e8d03beb155.png'
+    },
+    hightlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+    },
+    randomlinks: false,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多","🎮 电竞游戏爱好者"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: false,
+        type: '',
+        commentBarrage: false,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: '',
+            accessToken: ''
+        },
+        waline: {
+            url: '',
+        }
+    },
+    lightbox: 'fancybox',
+    rightside: {
+        enable: false
+    },
+    ai: {
+        enable: false,
+        key: '',
+        talk: '六安极速电脑，您身边的电脑专家！',
+        randomPost: false,
+    },
+    music: {
+        enable: true,
+    },
+    translate: undefined,
+};</script><meta name="generator" content="Hexo 7.1.1"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>档案</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>多媒体</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.nivod.vip/"><i class="scoicon sco-film-fill"></i><span>电影</span></a></li><li><a class="site-page child" href="/iptv/index.html"><i class="scoicon sco-film-fill"></i><span>直播</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司服务</span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://alist.4330413.xyz:4330"><i class="scoicon sco-laptop-line"></i><span>网盘v4</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://ipv6.0564.eu.org:4330"><i class="scoicon sco-laptop-line"></i><span>网盘v6</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>服务与支持</span></a></li><li><a class="site-page child" href="/computertest/index.html"><i class="scoicon sco-dashboard-fill"></i><span>电脑硬件测试</span></a></li><li><a class="site-page child" href="/m3u8/index.html"><i class="scoicon sco-dashboard-fill"></i><span>解析M3U8</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司简介</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="scoicon sco-contacts-fill"></i><span>产品展示</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>联系我们</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%AE%BE%E8%AE%A1%E8%BD%AF%E4%BB%B6/">设计软件<sup>1</sup></a><a href="/tags/adobe/">adobe<sup>1</sup></a><a href="/tags/%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6/">专业软件<sup>1</sup></a><a href="/tags/CorelDraw/">CorelDraw<sup>1</sup></a><a href="/tags/CDR/">CDR<sup>1</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">常用软件<sup>1</sup></a><a href="/tags/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">帮助文档<sup>3</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件<sup>2</sup></a><a href="/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/">模拟器<sup>1</sup></a><a href="/tags/%E5%85%B1%E4%BA%AB/">共享<sup>1</sup></a><a href="/tags/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/">共享工具<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">六安极速电脑</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">文章2025</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>档案</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>多媒体</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.nivod.vip/"><i class="scoicon sco-film-fill"></i><span>电影</span></a></li><li><a class="site-page child" href="/iptv/index.html"><i class="scoicon sco-film-fill"></i><span>直播</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司服务</span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://alist.4330413.xyz:4330"><i class="scoicon sco-laptop-line"></i><span>网盘v4</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://ipv6.0564.eu.org:4330"><i class="scoicon sco-laptop-line"></i><span>网盘v6</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>服务与支持</span></a></li><li><a class="site-page child" href="/computertest/index.html"><i class="scoicon sco-dashboard-fill"></i><span>电脑硬件测试</span></a></li><li><a class="site-page child" href="/m3u8/index.html"><i class="scoicon sco-dashboard-fill"></i><span>解析M3U8</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司简介</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="scoicon sco-contacts-fill"></i><span>产品展示</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>联系我们</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="scoicon sco-search-line"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">文章<sup>13</sup></div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/02/10/GTA5%20%E4%BE%A0%E7%9B%97%E9%A3%9E%E8%BD%A65%20v1.3411/" title="title"><img src="https://ywd0q-my.sharepoint.com/personal/game_ywd0q_onmicrosoft_com/_layouts/15/download.aspx?UniqueId=f628e839-83d5-400c-8acc-882473746244&amp;Translate=false&amp;tempauth=v1.eyJzaXRlaWQiOiJlOTJkZGJkOS0xNWUxLTRjYTYtYmE5MS1kYmQyNzVjMTI3YmUiLCJhcHBfZGlzcGxheW5hbWUiOiJhbGlzdCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC95d2QwcS1teS5zaGFyZXBvaW50LmNvbUAyNTMyOTVjNy05ZDg3LTRkOTgtYmMwOS0yOWJhNDA2NWEyZDgiLCJleHAiOiIxNzM5MjQzMTQyIn0.CgoKBHNuaWQSAjY0EgsIsuvf7tOS5T0QBRoOMjAuMTkwLjE0NC4xNzIqLEhQU1h1ckNpWUdvTWwySkZSS3RGOGhVMzNDaVliTXZkY1V5UExMakt1YzA9MJsBOAFCEKGATuJXoABAoGiqP0EpyVFKEGhhc2hlZHByb29mdG9rZW56ATG6ARxhbGxmaWxlcy53cml0ZSBhbGxmaWxlcy5yZWFkwgFJOWQ4OGUwOTgtMWZjMC00YWI1LWI3NWUtMmEzZGEzOWYxMDQwQDI1MzI5NWM3LTlkODctNGQ5OC1iYzA5LTI5YmE0MDY1YTJkOMgBAQ.K9mS02Jtmg3TsCpLy0fC52oTZKPRbimr0Z1UjOdI13g&amp;ApiVersion=2.0" alt="title"></a><div class="article-sort-item-info"><a class="article-sort-item-title" href="/2025/02/10/GTA5%20%E4%BE%A0%E7%9B%97%E9%A3%9E%E8%BD%A65%20v1.3411/" title="title" onclick="window.event.cancelBubble=true;">title</a><div class="article-sort-item-tags"></div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" title="跳转到指定页面" onkeyup="if (this.value === '0') this.value = ''"><a id="toPageButton" onclick="sco.toPage()"><i class="scoicon sco-show-right-line"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://bu.dusays.com/2023/12/30/659011053e246.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">提供计算机/网络/安防等解决方案。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">六安极速电脑</div><div class="author-info__desc">六安本地的电脑维修/网络/安防等服务商</div></a><div class="card-info-social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="scoicon sco-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/02/10/GTA5%20%E4%BE%A0%E7%9B%97%E9%A3%9E%E8%BD%A65%20v1.3411/" title="title"><img alt="title" src="https://ywd0q-my.sharepoint.com/personal/game_ywd0q_onmicrosoft_com/_layouts/15/download.aspx?UniqueId=f628e839-83d5-400c-8acc-882473746244&amp;Translate=false&amp;tempauth=v1.eyJzaXRlaWQiOiJlOTJkZGJkOS0xNWUxLTRjYTYtYmE5MS1kYmQyNzVjMTI3YmUiLCJhcHBfZGlzcGxheW5hbWUiOiJhbGlzdCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC95d2QwcS1teS5zaGFyZXBvaW50LmNvbUAyNTMyOTVjNy05ZDg3LTRkOTgtYmMwOS0yOWJhNDA2NWEyZDgiLCJleHAiOiIxNzM5MjQzMTQyIn0.CgoKBHNuaWQSAjY0EgsIsuvf7tOS5T0QBRoOMjAuMTkwLjE0NC4xNzIqLEhQU1h1ckNpWUdvTWwySkZSS3RGOGhVMzNDaVliTXZkY1V5UExMakt1YzA9MJsBOAFCEKGATuJXoABAoGiqP0EpyVFKEGhhc2hlZHByb29mdG9rZW56ATG6ARxhbGxmaWxlcy53cml0ZSBhbGxmaWxlcy5yZWFkwgFJOWQ4OGUwOTgtMWZjMC00YWI1LWI3NWUtMmEzZGEzOWYxMDQwQDI1MzI5NWM3LTlkODctNGQ5OC1iYzA5LTI5YmE0MDY1YTJkOMgBAQ.K9mS02Jtmg3TsCpLy0fC52oTZKPRbimr0Z1UjOdI13g&amp;ApiVersion=2.0"></a><div class="content"><a class="title" href="/2025/02/10/GTA5%20%E4%BE%A0%E7%9B%97%E9%A3%9E%E8%BD%A65%20v1.3411/" title="title">title</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/27/%E5%85%84%E5%BC%9F%E6%89%93%E5%8D%B0%E6%9C%BA%E6%B8%85%E9%9B%B6%E6%95%99%E7%A8%8B/" title="兄弟打印机清零教程"><img alt="兄弟打印机清零教程" src="https://pic1.imgdb.cn/item/67a950b8d0e0a243d4fdbe3c.jpg"></a><div class="content"><a class="title" href="/2024/11/27/%E5%85%84%E5%BC%9F%E6%89%93%E5%8D%B0%E6%9C%BA%E6%B8%85%E9%9B%B6%E6%95%99%E7%A8%8B/" title="兄弟打印机清零教程">兄弟打印机清零教程</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/21/%E4%BB%8E%E5%A4%A9%E6%B6%AF%E8%AE%BA%E5%9D%9B1999-2023%E7%A5%9E%E8%B4%B4%E7%9C%8B%E4%B8%AD%E5%9B%BD%E4%BA%92%E8%81%94%E7%BD%9120%E5%B9%B4%E5%8F%98%E5%8C%96/" title="从天涯论坛1999-2023神贴看中国互联网20年变化"><img alt="从天涯论坛1999-2023神贴看中国互联网20年变化" src="https://s21.ax1x.com/2024/09/21/pAMUsgS.jpg"></a><div class="content"><a class="title" href="/2024/09/21/%E4%BB%8E%E5%A4%A9%E6%B6%AF%E8%AE%BA%E5%9D%9B1999-2023%E7%A5%9E%E8%B4%B4%E7%9C%8B%E4%B8%AD%E5%9B%BD%E4%BA%92%E8%81%94%E7%BD%9120%E5%B9%B4%E5%8F%98%E5%8C%96/" title="从天涯论坛1999-2023神贴看中国互联网20年变化">从天涯论坛1999-2023神贴看中国互联网20年变化</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/15/TPLINK%20ER%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8%E6%80%8E%E4%B9%88%E5%88%92%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5?%20%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5%E5%88%92%E5%88%86%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97/" title="TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南"><img alt="TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南" src="https://pic.imgdb.cn/item/661dce9d0ea9cb1403752cd4.jpg"></a><div class="content"><a class="title" href="/2024/04/15/TPLINK%20ER%E7%B3%BB%E5%88%97%E8%B7%AF%E7%94%B1%E5%99%A8%E6%80%8E%E4%B9%88%E5%88%92%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5?%20%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%86%E5%A4%9A%E7%BD%91%E6%AE%B5%E5%88%92%E5%88%86%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97/" title="TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南">TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/11/%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A89%E7%BB%BF%E8%89%B2%E5%85%8D%E5%AE%89%E8%A3%85/" title="雷电模拟器9绿色免安装"><img alt="雷电模拟器9绿色免安装" src="https://pic.imgdb.cn/item/65efccd59f345e8d03c3144f.webp"></a><div class="content"><a class="title" href="/2024/03/11/%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A89%E7%BB%BF%E8%89%B2%E5%85%8D%E5%AE%89%E8%A3%85/" title="雷电模拟器9绿色免安装">雷电模拟器9绿色免安装</a><a class="article-recent_post_categories" href="/2024/03/11/%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A89%E7%BB%BF%E8%89%B2%E5%85%8D%E5%AE%89%E8%A3%85/">工具软件</a></div></div></div></div><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon scoicon sco-folder-fill"></i><div class="item-name">文章总数 :</div></div><div class="item-count">13</div></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">六安极速电脑</span></div><div class="footer-bar-description">来自六安极速电脑 - 六安本地的电脑维修/网络/安防等服务商的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg" alt="返回顶部"></div></div><div id="sco-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2025 By&nbsp;<a class="footer-bar-link" href="/">六安极速电脑</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/macy/2.5.1/macy.min.js"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
+</script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.staticfile.org/meting/2.0.1/Meting.min.js"></script><script>const meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+</script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="/js/music.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><script src="https://cdn.staticfile.org/lunr.js/2.3.9/lunr.min.js"></script></div><div id="js-pjax"><script id="config-diff">var PAGE_CONFIG = {
+    is_post: false,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: false,
+    comment: false,
+}
+</script></div><!-- newest comment--><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="scoicon sco-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.4.7"></script><!-- music--></body></html><script>const posts=["2025/02/10/GTA5 侠盗飞车5 v1.3411/","2024/11/27/兄弟打印机清零教程/","2024/09/21/从天涯论坛1999-2023神贴看中国互联网20年变化/","2024/04/15/TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南/","2024/03/11/雷电模拟器9绿色免安装/","2024/03/11/Macbook / iMac bootcamp 下载/","2024/02/27/CorelDRAW下载/","2024/02/23/win10/11连接共享打印机报错的解决办法/","2024/02/23/局域网文件/打印机共享/","2024/02/22/Adobe Photoshop各版本下载/","2024/02/22/office各版本下载/","2024/02/19/远程协助/","2024/02/18/系统激活/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
