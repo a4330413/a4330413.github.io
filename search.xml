@@ -116,8 +116,8 @@
     <url>/2025/02/17/AutoCAD%E5%88%A0%E9%99%A4%E5%90%8E%E6%97%A0%E6%B3%95%E5%9C%A8%E5%AE%89%E8%A3%85%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<h1 id="AutoCAD删除后无法再安装解决办法"><a href="#AutoCAD删除后无法再安装解决办法" class="headerlink" title="AutoCAD删除后无法再安装解决办法"></a>AutoCAD删除后无法再安装解决办法</h1><p><strong>以CAD2020举例</strong></p>
 <h2 id="🛠️-第一步：使用卸载工具卸载-AutoCAD"><a href="#🛠️-第一步：使用卸载工具卸载-AutoCAD" class="headerlink" title="🛠️ 第一步：使用卸载工具卸载 AutoCAD"></a>🛠️ 第一步：使用卸载工具卸载 AutoCAD</h2><ol>
-<li>下载 <strong>Uninstall Tool</strong> <button class="btn-sco " onclick="location.href = 'https://4330413.xyz/d/DSM/GX/%E5%B7%A5%E5%85%B7/Uninstall%20Tool%203.7.2%20Build%205701%20%E5%8D%95%E6%96%87%E4%BB%B6%E7%89%88.zip'" 
-  title=""></button>。</li>
+<li>下载 <strong>Uninstall Tool</strong> <button class="btn-sco red larger" onclick="location.href = 'https://4330413.xyz/d/DSM/GX/%E5%B7%A5%E5%85%B7/Uninstall%20Tool%203.7.2%20Build%205701%20%E5%8D%95%E6%96%87%E4%BB%B6%E7%89%88.zip''" 
+  title="点我下载"><i class="scoicon sco-arrow-right-bold"></i><span>点我下载</span></button>。</li>
 <li>打开 <strong>Uninstall Tool</strong> 卸载 AutoCAD 2020。</li>
 </ol>
 <h2 id="🧹-第二步：手动检查并清理以下文件夹"><a href="#🧹-第二步：手动检查并清理以下文件夹" class="headerlink" title="🧹 第二步：手动检查并清理以下文件夹"></a>🧹 第二步：手动检查并清理以下文件夹</h2><p>如果有残留文件夹，请手动删除：</p>
@@ -407,6 +407,22 @@
 ]]></content>
   </entry>
   <entry>
+    <title>系统激活</title>
+    <url>/2024/02/18/%E7%B3%BB%E7%BB%9F%E6%BF%80%E6%B4%BB/</url>
+    <content><![CDATA[<h2 id="激活方式一：激活软件激活"><a href="#激活方式一：激活软件激活" class="headerlink" title="激活方式一：激活软件激活"></a>激活方式一：激活软件激活</h2><p>点击<button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/%E6%BF%80%E6%B4%BB'" 
+  title="Download"><i class="scoicon sco-arrow-right-bold"></i><span>Download</span></button>，下载完成后打开软件，按照按照软件提示点击，即可激活系统。</p>
+<h2 id="激活方式二：命令激活"><a href="#激活方式二：命令激活" class="headerlink" title="激活方式二：命令激活"></a>激活方式二：命令激活</h2><h3 id="激活通道："><a href="#激活通道：" class="headerlink" title="激活通道："></a>激活通道：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr /skms kms.4330413.xyz &amp;&amp; slmgr /ato </span><br></pre></td></tr></table></figure>
+
+<h3 id="激活教程"><a href="#激活教程" class="headerlink" title="激活教程"></a>激活教程</h3><div class="tabs" id="激活方式一"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#激活方式一-1">第一步</button></li><li class="tab"><button type="button" data-href="#激活方式一-2">第二步</button></li><li class="tab"><button type="button" data-href="#激活方式一-3">第三步</button></li><li class="tab"><button type="button" data-href="#激活方式一-4">第四步</button></li><li class="tab"><button type="button" data-href="#激活方式一-5">第五步</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="激活方式一-1"><p><img src="https://pic.imgdb.cn/item/65d716fc9f345e8d03c50d4b.jpg" alt="第一步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-2"><p><img src="https://pic.imgdb.cn/item/65d716fd9f345e8d03c51000.jpg" alt="第二步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-3"><p><img src="https://pic.imgdb.cn/item/65d716fd9f345e8d03c50f60.jpg" alt="第三步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-4"><p><img src="https://pic.imgdb.cn/item/65d716fc9f345e8d03c50cbb.jpg" alt="第四步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-5"><p><img src="https://pic.imgdb.cn/item/65d716fc9f345e8d03c50c50.jpg" alt="第五步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div></div></div>
+]]></content>
+      <categories>
+        <category>系统激活</category>
+      </categories>
+      <tags>
+        <tag>帮助文档</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>远程协助</title>
     <url>/2024/02/19/%E8%BF%9C%E7%A8%8B%E5%8D%8F%E5%8A%A9/</url>
     <content><![CDATA[<h2 id=""><a href="#" class="headerlink" title="   "></a><div> <label class="hl-label bg-blue">方法一</label>  <label class="hl-label bg-red">向日葵远程协助</label>  </div></h2><p>第一步：点击  <button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/d/DSM/GX/%E8%BD%AF%E4%BB%B6/%E8%BF%9C%E7%A8%8B%E8%BD%AF%E4%BB%B6/%E5%90%91%E6%97%A5%E8%91%B5%E8%A2%AB%E6%8E%A7%E7%AB%AF/%E5%90%91%E6%97%A5%E8%91%B5.exe?sign=yetVm4BjdaQd4vCpLCj6o_f4m1HsJZwv7_DR15_yhPA=:0'" 
@@ -427,20 +443,10 @@
       </tags>
   </entry>
   <entry>
-    <title>系统激活</title>
-    <url>/2024/02/18/%E7%B3%BB%E7%BB%9F%E6%BF%80%E6%B4%BB/</url>
-    <content><![CDATA[<h2 id="激活方式一：激活软件激活"><a href="#激活方式一：激活软件激活" class="headerlink" title="激活方式一：激活软件激活"></a>激活方式一：激活软件激活</h2><p>点击<button class="btn-sco blue larger" onclick="location.href = 'https://alist.4330413.xyz:4330/%E6%BF%80%E6%B4%BB'" 
-  title="Download"><i class="scoicon sco-arrow-right-bold"></i><span>Download</span></button>，下载完成后打开软件，按照按照软件提示点击，即可激活系统。</p>
-<h2 id="激活方式二：命令激活"><a href="#激活方式二：命令激活" class="headerlink" title="激活方式二：命令激活"></a>激活方式二：命令激活</h2><h3 id="激活通道："><a href="#激活通道：" class="headerlink" title="激活通道："></a>激活通道：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr /skms kms.4330413.xyz &amp;&amp; slmgr /ato </span><br></pre></td></tr></table></figure>
-
-<h3 id="激活教程"><a href="#激活教程" class="headerlink" title="激活教程"></a>激活教程</h3><div class="tabs" id="激活方式一"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#激活方式一-1">第一步</button></li><li class="tab"><button type="button" data-href="#激活方式一-2">第二步</button></li><li class="tab"><button type="button" data-href="#激活方式一-3">第三步</button></li><li class="tab"><button type="button" data-href="#激活方式一-4">第四步</button></li><li class="tab"><button type="button" data-href="#激活方式一-5">第五步</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="激活方式一-1"><p><img src="https://pic.imgdb.cn/item/65d716fc9f345e8d03c50d4b.jpg" alt="第一步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-2"><p><img src="https://pic.imgdb.cn/item/65d716fd9f345e8d03c51000.jpg" alt="第二步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-3"><p><img src="https://pic.imgdb.cn/item/65d716fd9f345e8d03c50f60.jpg" alt="第三步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-4"><p><img src="https://pic.imgdb.cn/item/65d716fc9f345e8d03c50cbb.jpg" alt="第四步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div><div class="tab-item-content" id="激活方式一-5"><p><img src="https://pic.imgdb.cn/item/65d716fc9f345e8d03c50c50.jpg" alt="第五步"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="scoicon sco-arrow-up-line"></i></button></div></div></div>
+    <title>Macbook / iMac bootcamp 下载</title>
+    <url>/2024/03/11/Macbook%20/%20iMac%20bootcamp%20%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>Macbook iMac bootcamp</p>
 ]]></content>
-      <categories>
-        <category>系统激活</category>
-      </categories>
-      <tags>
-        <tag>帮助文档</tag>
-      </tags>
   </entry>
   <entry>
     <title>雷电模拟器9绿色免安装</title>
@@ -458,12 +464,6 @@
         <tag>工具软件</tag>
         <tag>模拟器</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Macbook / iMac bootcamp 下载</title>
-    <url>/2024/03/11/Macbook%20/%20iMac%20bootcamp%20%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p>Macbook iMac bootcamp</p>
-]]></content>
   </entry>
   <entry>
     <title>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法</title>
