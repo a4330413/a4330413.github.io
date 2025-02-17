@@ -114,7 +114,8 @@
   <entry>
     <title>AutoCAD删除后无法在安装解决办法</title>
     <url>/2025/02/17/AutoCAD%E5%88%A0%E9%99%A4%E5%90%8E%E6%97%A0%E6%B3%95%E5%9C%A8%E5%AE%89%E8%A3%85%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="AutoCAD-2020-完整卸载步骤"><a href="#AutoCAD-2020-完整卸载步骤" class="headerlink" title="AutoCAD 2020 完整卸载步骤"></a>AutoCAD 2020 完整卸载步骤</h1><h2 id="🛠️-第一步：使用卸载工具卸载-AutoCAD"><a href="#🛠️-第一步：使用卸载工具卸载-AutoCAD" class="headerlink" title="🛠️ 第一步：使用卸载工具卸载 AutoCAD"></a>🛠️ 第一步：使用卸载工具卸载 AutoCAD</h2><ol>
+    <content><![CDATA[<h1 id="AutoCAD删除后无法在安装解决办法"><a href="#AutoCAD删除后无法在安装解决办法" class="headerlink" title="AutoCAD删除后无法在安装解决办法"></a>AutoCAD删除后无法在安装解决办法</h1><p><strong>以CAD2020举例</strong></p>
+<h2 id="🛠️-第一步：使用卸载工具卸载-AutoCAD"><a href="#🛠️-第一步：使用卸载工具卸载-AutoCAD" class="headerlink" title="🛠️ 第一步：使用卸载工具卸载 AutoCAD"></a>🛠️ 第一步：使用卸载工具卸载 AutoCAD</h2><ol>
 <li>下载 <strong>Uninstall Tool</strong> <button class="btn-sco " onclick="location.href = 'https://4330413.xyz/d/DSM/GX/%E5%B7%A5%E5%85%B7/Uninstall%20Tool%203.7.2%20Build%205701%20%E5%8D%95%E6%96%87%E4%BB%B6%E7%89%88.zip'" 
   title=""></button>。</li>
 <li>打开 <strong>Uninstall Tool</strong> 卸载 AutoCAD 2020。</li>
@@ -459,12 +460,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Macbook / iMac bootcamp 下载</title>
-    <url>/2024/03/11/Macbook%20/%20iMac%20bootcamp%20%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p>Macbook iMac bootcamp</p>
-]]></content>
-  </entry>
-  <entry>
     <title>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法</title>
     <url>/2024/02/23/win10/11%E8%BF%9E%E6%8E%A5%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<h1 id="无法连接到打印机0x000003e3-Win10连接打印机0x000003e3错误的解决方法"><a href="#无法连接到打印机0x000003e3-Win10连接打印机0x000003e3错误的解决方法" class="headerlink" title="无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法"></a><strong>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法</strong></h1><p>无法连接到打印机0x000003e3 Win10连接打印机0x000003e3错误的解决方法，近期有许多用户碰到了没法连接到共享打印机的难题，造成没法打印，危害工作中，那麼碰到这个问题要如何解决呢？我们一起来看一下。</p>
@@ -495,6 +490,12 @@
         <tag>帮助文档</tag>
         <tag>共享</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Macbook / iMac bootcamp 下载</title>
+    <url>/2024/03/11/Macbook%20/%20iMac%20bootcamp%20%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>Macbook iMac bootcamp</p>
+]]></content>
   </entry>
   <entry>
     <title>局域网文件/打印机共享</title>
