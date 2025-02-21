@@ -144,13 +144,20 @@ console.log(
       border-radius: 8px;
       padding: 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      margin: 30px 0;
+      margin: 100px auto;  /* 使容器垂直居中 */
       width: 100%;
       max-width: 500px;
       text-align: center;
     }
 
-<pre><code>/* 输入框样式 */
+<pre><code>/* 设置标题为蓝色 */
+h2 &#123;
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 20px;
+&#125;
+
+/* 输入框样式 */
 #serial-number &#123;
   width: 100%;
   padding: 10px;
@@ -188,6 +195,17 @@ button:hover &#123;
   color: red;
   font-size: 14px;
 &#125;
+
+/* 过保信息 */
+.expired &#123;
+  color: #dc3545;
+  font-weight: bold;
+&#125;
+
+.valid &#123;
+  color: #28a745;
+  font-weight: bold;
+&#125;
 </code></pre>
 <p>  </style></p>
 </head>
@@ -211,12 +229,24 @@ button:hover &#123;
         if (data.message) {
           document.getElementById("warranty-info").innerHTML = "<p class='error'>" + data.message + "</p>";
         } else {
+          var warrantyEndDate = new Date(data.warranty_end_date);
+          var currentDate = new Date();
+          var statusMessage = "";
+
+          // 判断是否过保
+          if (currentDate > warrantyEndDate) {
+            statusMessage = "<p class='expired'>已过保</p>";
+          } else {
+            statusMessage = "<p class='valid'>在保</p>";
+          }
+
           var info = `
             <h3>产品信息：</h3>
             <p>产品名称: ${data.name}</p>
             <p>购买人: ${data.purchaser}</p>
             <p>保修开始时间: ${data.warranty_start_date}</p>
             <p>保修结束时间: ${data.warranty_end_date}</p>
+            ${statusMessage}
           `;
           document.getElementById("warranty-info").innerHTML = info;
         }
