@@ -246,7 +246,7 @@ button:hover &#123;
             <p>购买人: ${data.purchaser}</p>
             <p>保修开始时间: ${data.warranty_start_date}</p>
             <p>保修结束时间: ${data.warranty_end_date}</p>
-            <p>产品图片: ![极速电脑保修图](${data.img})</p>
+            <p>产品图片: <img src=${data.img}></p>
             ${statusMessage}
           `;
           document.getElementById("warranty-info").innerHTML = info;
