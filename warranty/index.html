@@ -218,6 +218,17 @@ button:hover &#123;
 </div>
 
 <script>
+  // 转义 HTML 特殊字符的函数
+function escapeHtml(text) {
+  return text.replace(/[&<>"']/g, (match) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[match]));
+}
+  
   function getWarrantyInfo() {
     var serialNumber = document.getElementById("serial-number").value;
     var uuid = '9d4f5476-0b85-f93d-8174-0f3c6f66f1a1';  // 自定义 UUID
@@ -246,7 +257,7 @@ button:hover &#123;
             <p>购买人: ${data.purchaser}</p>
             <p>保修开始时间: ${data.warranty_start_date}</p>
             <p>保修结束时间: ${data.warranty_end_date}</p>
-            <p>产品图片: <img src=${data.img}></p>
+            <p>产品图片: <img src="${data.img}" alt="${escapeHtml(data.name)}" onerror="this.src='fallback.jpg';"></p>
             ${statusMessage}
           `;
           document.getElementById("warranty-info").innerHTML = info;
