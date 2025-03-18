@@ -226,7 +226,6 @@ function getWarrantyInfo() {
         const warrantyEndDate = new Date(data.warranty_end_date);
         const currentDate = new Date();
         const statusClass = currentDate > warrantyEndDate ? 'expired' : 'valid';
-        const statusText = currentDate > warrantyEndDate ? '已过保' : '在保';
 
         container.innerHTML = `
           <div class="info-card">
@@ -241,7 +240,6 @@ function getWarrantyInfo() {
                    alt="${escapeHtml(data.name)}"
                    onerror="this.src='fallback.jpg'">
             </div>
-            <div class="status-badge ${statusClass}">${statusText}</div>
           </div>
         `;
       }
