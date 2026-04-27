@@ -1,0 +1,788 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>保修信息查询 | 六安极速电脑</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.4.7"><!-- inject head--><link rel="stylesheet" href="https://cdn.cbd.int/solitude-source/icon/scoicon.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description" content="&amp;#x2F;* 保修查询页：全部样式限定在 #warranty-query-page 内，避免影响 Hexo&amp;#x2F;Solitude 主题 *&amp;#x2F; #warranty-query-page { --wq-primary: #2563eb; --wq-primary-2: #7c3aed; -"><!-- pwa--><meta name="theme-color" content="#ffffff"><link rel="manifest" href="/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><link rel="mask-icon" href="https://pic1.imgdb.cn/item/67a348e9d0e0a243d4fbf841.png" color="#ffffff"><link rel="apple-touch-icon" sizes="180x180" href="https://pic1.imgdb.cn/item/67a348e9d0e0a243d4fbf841.png"><link rel="icon" type="image/png" sizes="16x16" href="https://pic1.imgdb.cn/item/67a348ead0e0a243d4fbf842.png"><link rel="icon" type="image/png" sizes="32x32" href="https://pic1.imgdb.cn/item/67a34870d0e0a243d4fbf834.png"><link rel="bookmark" href="https://pic1.imgdb.cn/item/67a348e9d0e0a243d4fbf841.png"><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c🔥 程序：Hexo | 主题：Hexo-Theme-Solitude | 作者：王卓Sco、亦封 | Github: https://github.com/wleelw/Hexo-theme-solitude | 版本：v1.4.7 😄",
+    "color: #fff; background: linear-gradient(-25deg, #a8edea, #fed6e3); padding: 8px 15px; border-radius: 8px; text-shadow: 2px 2px 4px white; color: black;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: 'false',
+    lazyload: {
+        enable: false,
+        error: 'https://pic.imgdb.cn/item/65d582a49f345e8d03beb155.png'
+    },
+    hightlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+    },
+    randomlinks: false,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多","🎮 电竞游戏爱好者"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: false,
+        type: '',
+        commentBarrage: false,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: '',
+            accessToken: ''
+        },
+        waline: {
+            url: '',
+        }
+    },
+    lightbox: 'fancybox',
+    rightside: {
+        enable: false
+    },
+    ai: {
+        enable: false,
+        key: '',
+        talk: '六安极速电脑，您身边的电脑专家！',
+        randomPost: false,
+    },
+    music: {
+        enable: true,
+    },
+    translate: undefined,
+};</script><meta name="generator" content="Hexo 7.1.1"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);"><i class="scoicon sco-side-bar-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>档案</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>多媒体</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://m.0564.org/"><i class="scoicon sco-film-fill"></i><span>电影</span></a></li><li><a class="site-page child" href="/iptv/index.html"><i class="scoicon sco-film-fill"></i><span>直播</span></a></li></ul></div><div class="menus_item"><a class="site-page not-child" target="_blank" rel="noopener" href="https://soft.0564.org"><span>软件中心</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司服务</span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://pan.0564.org:4330"><i class="scoicon sco-laptop-line"></i><span>网盘</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>服务与支持</span></a></li><li><a class="site-page child" href="/computertest/index.html"><i class="scoicon sco-dashboard-fill"></i><span>电脑硬件测试</span></a></li><li><a class="site-page child" href="/m3u8/index.html"><i class="scoicon sco-dashboard-fill"></i><span>解析M3U8</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司简介</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="scoicon sco-contacts-fill"></i><span>产品展示</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>联系我们</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%AE%BE%E8%AE%A1%E8%BD%AF%E4%BB%B6/">设计软件<sup>1</sup></a><a href="/tags/adobe/">adobe<sup>1</sup></a><a href="/tags/%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6/">专业软件<sup>1</sup></a><a href="/tags/CorelDraw/">CorelDraw<sup>1</sup></a><a href="/tags/CDR/">CDR<sup>1</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">常用软件<sup>1</sup></a><a href="/tags/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">帮助文档<sup>3</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/">工具软件<sup>2</sup></a><a href="/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/">模拟器<sup>1</sup></a><a href="/tags/%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/">共享工具<sup>1</sup></a><a href="/tags/%E5%85%B1%E4%BA%AB/">共享<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页" target="_self"><span class="title">六安极速电脑</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">保修信息查询</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>档案</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="scoicon sco-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>多媒体</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="scoicon sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://m.0564.org/"><i class="scoicon sco-film-fill"></i><span>电影</span></a></li><li><a class="site-page child" href="/iptv/index.html"><i class="scoicon sco-film-fill"></i><span>直播</span></a></li></ul></div><div class="menus_item"><a class="site-page not-child" target="_blank" rel="noopener" href="https://soft.0564.org"><span>软件中心</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司服务</span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://pan.0564.org:4330"><i class="scoicon sco-laptop-line"></i><span>网盘</span></a></li><li><a class="site-page child" href="/tlink/"><i class="scoicon sco-tools-fill"></i><span>服务与支持</span></a></li><li><a class="site-page child" href="/computertest/index.html"><i class="scoicon sco-dashboard-fill"></i><span>电脑硬件测试</span></a></li><li><a class="site-page child" href="/m3u8/index.html"><i class="scoicon sco-dashboard-fill"></i><span>解析M3U8</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>公司简介</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="scoicon sco-contacts-fill"></i><span>产品展示</span></a></li><li><a class="site-page child" href="/about/"><i class="scoicon sco-contacts-fill"></i><span>联系我们</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="scoicon sco-search-line"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><style>
+/* 保修查询页：全部样式限定在 #warranty-query-page 内，避免影响 Hexo/Solitude 主题 */
+#warranty-query-page {
+    --wq-primary: #2563eb;
+    --wq-primary-2: #7c3aed;
+    --wq-success: #16a34a;
+    --wq-danger: #ef4444;
+    --wq-text: #1e293b;
+    --wq-muted: #64748b;
+    --wq-border: #e2e8f0;
+    --wq-bg: #f8fafc;
+    --wq-card: rgba(255, 255, 255, 0.92);
+    max-width: 860px;
+    margin: 36px auto;
+    padding: 0 16px;
+    color: var(--wq-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    box-sizing: border-box;
+}
+
+#warranty-query-page *,
+#warranty-query-page *::before,
+#warranty-query-page *::after {
+    box-sizing: border-box;
+}
+
+#warranty-query-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    padding: 34px;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(37, 99, 235, .16), transparent 34%),
+        radial-gradient(circle at 100% 10%, rgba(124, 58, 237, .14), transparent 32%),
+        var(--wq-card);
+    border: 1px solid rgba(226, 232, 240, .9);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, .12);
+    backdrop-filter: blur(14px);
+    animation: wqSlideUp .45s ease both;
+}
+
+@keyframes wqSlideUp {
+    from { transform: translateY(14px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.wq-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.wq-title {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(26px, 5vw, 38px);
+    line-height: 1.18;
+    font-weight: 800;
+    letter-spacing: .03em;
+}
+
+.wq-subtitle {
+    margin: 10px 0 0;
+    color: var(--wq-muted);
+    font-size: 15px;
+}
+
+.wq-query-box {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 14px;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.wq-input-wrap {
+    position: relative;
+}
+
+.wq-input-icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    pointer-events: none;
+}
+
+#serial-number {
+    display: block;
+    width: 100%;
+    height: 56px;
+    padding: 0 18px 0 50px;
+    border: 1.5px solid var(--wq-border);
+    border-radius: 18px;
+    background: rgba(255,255,255,.92);
+    color: var(--wq-text);
+    font-size: 17px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+#serial-number:focus {
+    border-color: var(--wq-primary);
+    background: #fff;
+    box-shadow: 0 0 0 5px rgba(37, 99, 235, .12);
+}
+
+#warranty-query-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 56px;
+    border: none;
+    border-radius: 18px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--wq-primary), var(--wq-primary-2));
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, .26);
+    transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+
+#warranty-query-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(37, 99, 235, .34);
+}
+
+#warranty-query-btn:active {
+    transform: translateY(0) scale(.99);
+}
+
+#warranty-query-btn:disabled {
+    opacity: .72;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.wq-loader {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,.75);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: wqSpin .7s linear infinite;
+    display: none;
+}
+
+#warranty-query-btn.is-loading .wq-loader {
+    display: inline-block;
+}
+
+@keyframes wqSpin {
+    to { transform: rotate(360deg); }
+}
+
+#warranty-info {
+    max-width: 720px;
+    margin: 24px auto 0;
+}
+
+.wq-empty-tip {
+    text-align: center;
+    padding: 24px 16px 4px;
+    color: var(--wq-muted);
+    font-size: 14px;
+}
+
+.wq-info-card,
+.wq-error-message {
+    border-radius: 24px;
+    background: rgba(255,255,255,.96);
+    border: 1px solid var(--wq-border);
+    box-shadow: 0 12px 34px rgba(15, 23, 42, .08);
+    overflow: hidden;
+    animation: wqFadeIn .26s ease both;
+}
+
+@keyframes wqFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wq-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--wq-border);
+    background: linear-gradient(135deg, rgba(37,99,235,.08), rgba(124,58,237,.08));
+}
+
+.wq-product-name {
+    min-width: 0;
+    font-size: 19px;
+    font-weight: 800;
+    color: #0f172a;
+    word-break: break-word;
+}
+
+.wq-status-badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.wq-status-badge.valid {
+    background: linear-gradient(135deg, #22c55e, #14b8a6);
+}
+
+.wq-status-badge.expired {
+    background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+.wq-card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 22px;
+    padding: 22px;
+    align-items: start;
+}
+
+.wq-detail-list {
+    display: grid;
+    gap: 12px;
+}
+
+.wq-detail-item {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 10px;
+    min-height: 42px;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+.wq-detail-label {
+    color: var(--wq-muted);
+    font-size: 14px;
+}
+
+.wq-detail-value {
+    color: var(--wq-text);
+    font-size: 15px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.wq-img-box {
+    text-align: center;
+}
+
+.product-img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid var(--wq-border);
+    background: #f1f5f9;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, .12);
+    cursor: zoom-in;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.product-img:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, .18);
+}
+
+.wq-img-tip {
+    margin-top: 10px;
+    color: var(--wq-muted);
+    font-size: 13px;
+}
+
+.wq-error-message {
+    padding: 18px 20px;
+    color: #991b1b;
+    background: #fff1f2;
+    border-color: #fecdd3;
+    font-weight: 700;
+}
+
+/* 图片放大预览 */
+#wq-image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(2, 6, 23, .82);
+    backdrop-filter: blur(8px);
+}
+
+#wq-image-lightbox.show {
+    display: flex;
+}
+
+#wq-lightbox-img {
+    display: block;
+    max-width: min(96vw, 1100px);
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(0,0,0,.38);
+}
+
+#wq-lightbox-close {
+    position: fixed;
+    right: 22px;
+    top: 18px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.16);
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #warranty-query-page {
+        margin: 18px auto;
+        padding: 0 12px;
+    }
+
+    #warranty-query-container {
+        padding: 24px 16px;
+        border-radius: 24px;
+    }
+
+    .wq-query-box {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #serial-number,
+    #warranty-query-btn {
+        height: 54px;
+        border-radius: 16px;
+        font-size: 16px;
+    }
+
+    .wq-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .wq-card-body {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .wq-img-box {
+        order: -1;
+    }
+
+    .product-img {
+        max-width: 100%;
+        aspect-ratio: 16 / 10;
+        border-radius: 18px;
+    }
+
+    .wq-detail-item {
+        grid-template-columns: 92px 1fr;
+        padding: 10px;
+    }
+
+    #wq-image-lightbox {
+        padding: 12px;
+    }
+
+    #wq-lightbox-img {
+        max-width: 96vw;
+        max-height: 82vh;
+        border-radius: 14px;
+    }
+}
+</style>
+
+<div id="warranty-query-page">
+    <div id="warranty-query-container">
+        <div class="wq-header">
+            <h2 class="wq-title">保修查询</h2>
+            <p class="wq-subtitle">输入产品 SN 序列号，快速查询保修状态</p>
+        </div>
+
+<pre><code>    &lt;div class=&quot;wq-query-box&quot;&gt;
+        &lt;div class=&quot;wq-input-wrap&quot;&gt;
+            &lt;span class=&quot;wq-input-icon&quot;&gt;🔎&lt;/span&gt;
+            &lt;input type=&quot;text&quot; id=&quot;serial-number&quot; placeholder=&quot;请输入产品序列号（SN）&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;/div&gt;
+        &lt;button id=&quot;warranty-query-btn&quot; type=&quot;button&quot; onclick=&quot;getWarrantyInfo()&quot;&gt;
+            &lt;span class=&quot;wq-btn-text&quot;&gt;立即查询&lt;/span&gt;
+            &lt;span class=&quot;wq-loader&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;warranty-info&quot;&gt;
+        &lt;div class=&quot;wq-empty-tip&quot;&gt;支持链接自动查询：页面地址后添加 &lt;b&gt;?sn=产品SN&lt;/b&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<div id="wq-image-lightbox" onclick="closeWarrantyImagePreview()">
+    <button id="wq-lightbox-close" type="button" aria-label="关闭" onclick="closeWarrantyImagePreview(event)">×</button>
+    <img id="wq-lightbox-img" src="" alt="产品图片预览" onclick="event.stopPropagation()">
+</div>
+
+<script>
+(function () {
+    const API_UUID = '9d4f5476-0b85-f93d-8174-0f3c6f66f1a1';
+    const API_BASE = 'https://fk.4330413.xyz:4330/';
+    const DEFAULT_IMG = 'default-product.png';
+
+    function escapeHtml(value) {
+        const text = String(value ?? '');
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        };
+        return text.replace(/[&<>"']/g, (m) => map[m]);
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '暂无';
+        const date = new Date(dateStr);
+        if (Number.isNaN(date.getTime())) return escapeHtml(dateStr);
+        return `${date.getFullYear()}年${String(date.getMonth() + 1).padStart(2, '0')}月${String(date.getDate()).padStart(2, '0')}日`;
+    }
+
+    function setLoading(isLoading) {
+        const button = document.getElementById('warranty-query-btn');
+        if (!button) return;
+        button.disabled = isLoading;
+        button.classList.toggle('is-loading', isLoading);
+        const text = button.querySelector('.wq-btn-text');
+        if (text) text.textContent = isLoading ? '查询中' : '立即查询';
+    }
+
+    function showError(message) {
+        const infoDiv = document.getElementById('warranty-info');
+        infoDiv.innerHTML = `<div class="wq-error-message">⚠️ ${escapeHtml(message)}</div>`;
+    }
+
+    function normalizeImgUrl(img) {
+        const url = String(img || '').trim();
+        return url || DEFAULT_IMG;
+    }
+
+    window.getWarrantyInfo = function () {
+        const serialNumber = document.getElementById('serial-number').value.trim();
+
+        if (!serialNumber) {
+            showError('请输入有效的序列号');
+            return;
+        }
+
+        setLoading(true);
+
+        fetch(`${API_BASE}${API_UUID}?serial_number=${encodeURIComponent(serialNumber)}`)
+            .then(response => {
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                return response.json();
+            })
+            .then(data => {
+                if (data.message) {
+                    showError(data.message);
+                } else {
+                    showWarrantyInfo(data);
+                }
+            })
+            .catch(() => showError('网络请求失败，请检查网络连接'))
+            .finally(() => setLoading(false));
+    };
+
+    window.showWarrantyInfo = function (data) {
+        const infoDiv = document.getElementById('warranty-info');
+        const warrantyEndDate = new Date(data.warranty_end_date);
+        const currentDate = new Date();
+        const expired = !Number.isNaN(warrantyEndDate.getTime()) && currentDate > warrantyEndDate;
+        const statusClass = expired ? 'expired' : 'valid';
+        const statusText = expired ? '已过保' : '在保中';
+        const imgUrl = normalizeImgUrl(data.img);
+
+        infoDiv.innerHTML = `
+            <div class="wq-info-card">
+                <div class="wq-card-top">
+                    <div class="wq-product-name">${escapeHtml(data.name || '未命名产品')}</div>
+                    <div class="wq-status-badge ${statusClass}">${statusText}</div>
+                </div>
+                <div class="wq-card-body">
+                    <div class="wq-detail-list">
+                        <div class="wq-detail-item">
+                            <div class="wq-detail-label">产品名称</div>
+                            <div class="wq-detail-value">${escapeHtml(data.name || '暂无')}</div>
+                        </div>
+                        <div class="wq-detail-item">
+                            <div class="wq-detail-label">购买用户</div>
+                            <div class="wq-detail-value">${escapeHtml(data.purchaser || '暂无')}</div>
+                        </div>
+                        <div class="wq-detail-item">
+                            <div class="wq-detail-label">保修开始</div>
+                            <div class="wq-detail-value">${formatDate(data.warranty_start_date)}</div>
+                        </div>
+                        <div class="wq-detail-item">
+                            <div class="wq-detail-label">保修到期</div>
+                            <div class="wq-detail-value">${formatDate(data.warranty_end_date)}</div>
+                        </div>
+                    </div>
+                    <div class="wq-img-box">
+                        <img class="product-img"
+                             src="${escapeHtml(imgUrl)}"
+                             alt="${escapeHtml(data.name || '产品图片')}"
+                             loading="lazy"
+                             onclick="openWarrantyImagePreview(this.src)"
+                             onerror="this.onerror=null;this.src='${DEFAULT_IMG}'">
+                        <div class="wq-img-tip">点击图片可放大查看</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    };
+
+    window.openWarrantyImagePreview = function (src) {
+        const lightbox = document.getElementById('wq-image-lightbox');
+        const img = document.getElementById('wq-lightbox-img');
+        if (!lightbox || !img || !src) return;
+        img.src = src;
+        lightbox.classList.add('show');
+        document.documentElement.style.overflow = 'hidden';
+    };
+
+    window.closeWarrantyImagePreview = function (event) {
+        if (event) event.stopPropagation();
+        const lightbox = document.getElementById('wq-image-lightbox');
+        const img = document.getElementById('wq-lightbox-img');
+        if (!lightbox || !img) return;
+        lightbox.classList.remove('show');
+        img.src = '';
+        document.documentElement.style.overflow = '';
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const input = document.getElementById('serial-number');
+
+        if (input) {
+            input.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    window.getWarrantyInfo();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                window.closeWarrantyImagePreview();
+            }
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const serialNumber = urlParams.get('sn');
+        if (serialNumber && input) {
+            input.value = serialNumber;
+            window.getWarrantyInfo();
+        }
+    });
+})();
+</script>
+</div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><span class="scoicon">六安极速电脑</span></div><div class="footer-bar-description">来自六安极速电脑 - 六安本地的电脑维修/网络/安防等服务商的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://pic.imgdb.cn/item/65d582a49f345e8d03beb1c7.jpg" alt="返回顶部"></div></div><div id="sco-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2026 By&nbsp;<a class="footer-bar-link" href="/">六安极速电脑</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.4.7"></script><script src="/js/utils.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/macy/2.5.1/macy.min.js"></script><script src="https://cdn.cbd.int/solitude-source/js/universe.min.js"></script><script>dark()
+</script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.staticfile.org/meting/2.0.1/Meting.min.js"></script><script>const meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+</script><script src="/js/covercolor/local.js?v=1.4.7"></script><script src="/js/music.js?v=1.4.7"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><script src="https://cdn.staticfile.org/lunr.js/2.3.9/lunr.min.js"></script></div><div id="js-pjax"><script id="config-diff">var PAGE_CONFIG = {
+    is_post: false,
+    is_page: true,
+    is_home: false,
+    page: '',
+    toc: false,
+    comment: false,
+}
+</script></div><!-- newest comment--><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="scoicon sco-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.4.7"></script><!-- music--></body></html><script>const posts=["2025/02/17/AutoCAD删除后无法在安装解决办法/","2024/11/27/兄弟打印机清零教程/","2024/09/21/从天涯论坛1999-2023神贴看中国互联网20年变化/","2024/04/15/TPLINK ER系列路由器怎么划分多网段? 路由器分多网段划分设置指南/","2024/03/11/雷电模拟器9绿色免安装/","2024/02/27/CorelDRAW下载/","2024/02/23/win10/11连接共享打印机报错的解决办法/","2024/02/23/局域网文件/打印机共享/","2024/02/22/Adobe Photoshop各版本下载/","2024/02/22/office各版本下载/","2024/02/19/远程协助/","2024/02/18/系统激活/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
